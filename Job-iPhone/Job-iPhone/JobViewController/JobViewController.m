@@ -11,7 +11,7 @@
 @interface JobViewController ()
 
 @end
-
+  
 @implementation JobViewController
 
 + (instancetype)instance
