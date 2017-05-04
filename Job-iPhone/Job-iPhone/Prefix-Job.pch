@@ -1,0 +1,17 @@
+//
+//  Prefix-Job.pch
+//  Job-iPhone
+//
+//  Created by shuilin on 04/05/2017.
+//  Copyright © 2017 enjoyloop. All rights reserved.
+//
+
+#ifndef Prefix_Job_pch
+#define Prefix_Job_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "MCProtocolCommand.h"
+
+#endif /* Prefix_Job_pch */
