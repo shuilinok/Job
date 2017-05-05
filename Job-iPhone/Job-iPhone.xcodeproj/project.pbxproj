@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4546BA531EBC200C00446AB5 /* HttpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4546BA521EBC200C00446AB5 /* HttpRequestFactory.m */; };
+		4546BA561EBC201F00446AB5 /* HttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4546BA551EBC201F00446AB5 /* HttpRequestManager.m */; };
+		4546BA5A1EBC213A00446AB5 /* ELApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4546BA591EBC213A00446AB5 /* ELApp.m */; };
 		455D94151EBB22B6004E6E27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 455D94141EBB22B6004E6E27 /* main.m */; };
 		455D94181EBB22B6004E6E27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 455D94171EBB22B6004E6E27 /* AppDelegate.m */; };
 		455D941E1EBB22B6004E6E27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455D941C1EBB22B6004E6E27 /* Main.storyboard */; };
@@ -50,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4546BA501EBC1E7700446AB5 /* ServerRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequestFactory.h; sourceTree = "<group>"; };
+		4546BA511EBC200C00446AB5 /* HttpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestFactory.h; sourceTree = "<group>"; };
+		4546BA521EBC200C00446AB5 /* HttpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestFactory.m; sourceTree = "<group>"; };
+		4546BA541EBC201F00446AB5 /* HttpRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequestManager.h; sourceTree = "<group>"; };
+		4546BA551EBC201F00446AB5 /* HttpRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestManager.m; sourceTree = "<group>"; };
+		4546BA581EBC213A00446AB5 /* ELApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELApp.h; sourceTree = "<group>"; };
+		4546BA591EBC213A00446AB5 /* ELApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELApp.m; sourceTree = "<group>"; };
 		455D94101EBB22B6004E6E27 /* Job-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Job-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		455D94141EBB22B6004E6E27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		455D94161EBB22B6004E6E27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4546BA571EBC20B400446AB5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4546BA581EBC213A00446AB5 /* ELApp.h */,
+				4546BA591EBC213A00446AB5 /* ELApp.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		455D94071EBB22B6004E6E27 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +250,11 @@
 		455D942F1EBB22C0004E6E27 /* ServerRequest */ = {
 			isa = PBXGroup;
 			children = (
+				4546BA501EBC1E7700446AB5 /* ServerRequestFactory.h */,
+				4546BA511EBC200C00446AB5 /* HttpRequestFactory.h */,
+				4546BA521EBC200C00446AB5 /* HttpRequestFactory.m */,
+				4546BA541EBC201F00446AB5 /* HttpRequestManager.h */,
+				4546BA551EBC201F00446AB5 /* HttpRequestManager.m */,
 			);
 			path = ServerRequest;
 			sourceTree = "<group>";
@@ -238,6 +262,7 @@
 		455D94301EBB22C0004E6E27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4546BA571EBC20B400446AB5 /* App */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -495,6 +520,8 @@
 				455D94871EBB22C0004E6E27 /* UIButton+AFNetworking.m in Sources */,
 				455D94851EBB22C0004E6E27 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				455D94971EBB22C0004E6E27 /* MBProgressHUD.m in Sources */,
+				4546BA561EBC201F00446AB5 /* HttpRequestManager.m in Sources */,
+				4546BA5A1EBC213A00446AB5 /* ELApp.m in Sources */,
 				455D947F1EBB22C0004E6E27 /* AFSecurityPolicy.m in Sources */,
 				455D94911EBB22C0004E6E27 /* ColorHelper.m in Sources */,
 				455D94931EBB22C0004E6E27 /* DictionaryHelper.m in Sources */,
@@ -512,6 +539,7 @@
 				455D94A11EBB2441004E6E27 /* JobViewController.m in Sources */,
 				455D94181EBB22B6004E6E27 /* AppDelegate.m in Sources */,
 				455D94151EBB22B6004E6E27 /* main.m in Sources */,
+				4546BA531EBC200C00446AB5 /* HttpRequestFactory.m in Sources */,
 				455D948F1EBB22C0004E6E27 /* ArrayHelper.m in Sources */,
 				455D94941EBB22C0004E6E27 /* ObjectHandler.m in Sources */,
 			);
