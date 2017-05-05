@@ -50,6 +50,8 @@
 		455D94A11EBB2441004E6E27 /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455D94A01EBB2441004E6E27 /* JobViewController.m */; };
 		455D94A31EBB2457004E6E27 /* Job.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455D94A21EBB2457004E6E27 /* Job.storyboard */; };
 		455D94A61EBB2473004E6E27 /* JobListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455D94A51EBB2473004E6E27 /* JobListViewController.m */; };
+		45F5720C1EBC2B630042BDEA /* MORequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F572091EBC2B630042BDEA /* MORequestFactory.m */; };
+		45F5720D1EBC2B630042BDEA /* MORequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5720B1EBC2B630042BDEA /* MORequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,11 @@
 		455D94A41EBB2473004E6E27 /* JobListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobListViewController.h; sourceTree = "<group>"; };
 		455D94A51EBB2473004E6E27 /* JobListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobListViewController.m; sourceTree = "<group>"; };
 		455D94A71EBB3732004E6E27 /* Prefix-Job.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prefix-Job.pch"; sourceTree = "<group>"; };
+		45F572071EBC2B630042BDEA /* DatabaseRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseRequestFactory.h; sourceTree = "<group>"; };
+		45F572081EBC2B630042BDEA /* MORequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MORequestFactory.h; sourceTree = "<group>"; };
+		45F572091EBC2B630042BDEA /* MORequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MORequestFactory.m; sourceTree = "<group>"; };
+		45F5720A1EBC2B630042BDEA /* MORequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MORequestManager.h; sourceTree = "<group>"; };
+		45F5720B1EBC2B630042BDEA /* MORequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MORequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +225,8 @@
 		455D942B1EBB22C0004E6E27 /* Imp */ = {
 			isa = PBXGroup;
 			children = (
+				45F572061EBC2B630042BDEA /* DatabaseRequest */,
 				455D942C1EBB22C0004E6E27 /* Animation */,
-				455D942D1EBB22C0004E6E27 /* DBRequest */,
 				455D942E1EBB22C0004E6E27 /* FileRequest */,
 				455D942F1EBB22C0004E6E27 /* ServerRequest */,
 			);
@@ -231,13 +238,6 @@
 			children = (
 			);
 			path = Animation;
-			sourceTree = "<group>";
-		};
-		455D942D1EBB22C0004E6E27 /* DBRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DBRequest;
 			sourceTree = "<group>";
 		};
 		455D942E1EBB22C0004E6E27 /* FileRequest */ = {
@@ -431,6 +431,18 @@
 			path = RootViewController;
 			sourceTree = "<group>";
 		};
+		45F572061EBC2B630042BDEA /* DatabaseRequest */ = {
+			isa = PBXGroup;
+			children = (
+				45F572071EBC2B630042BDEA /* DatabaseRequestFactory.h */,
+				45F572081EBC2B630042BDEA /* MORequestFactory.h */,
+				45F572091EBC2B630042BDEA /* MORequestFactory.m */,
+				45F5720A1EBC2B630042BDEA /* MORequestManager.h */,
+				45F5720B1EBC2B630042BDEA /* MORequestManager.m */,
+			);
+			path = DatabaseRequest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F5720D1EBC2B630042BDEA /* MORequestManager.m in Sources */,
 				455D949E1EBB2367004E6E27 /* ViewController.m in Sources */,
 				455D947B1EBB22C0004E6E27 /* AFHTTPRequestOperation.m in Sources */,
 				455D94901EBB22C0004E6E27 /* CharHelper.m in Sources */,
@@ -513,6 +526,7 @@
 				455D94821EBB22C0004E6E27 /* AFURLResponseSerialization.m in Sources */,
 				455D94921EBB22C0004E6E27 /* DateHelper.m in Sources */,
 				455D948D1EBB22C0004E6E27 /* MCProtocolCommand.m in Sources */,
+				45F5720C1EBC2B630042BDEA /* MORequestFactory.m in Sources */,
 				455D94951EBB22C0004E6E27 /* StringHelper.m in Sources */,
 				455D94961EBB22C0004E6E27 /* ViewHelper.m in Sources */,
 				455D94801EBB22C0004E6E27 /* AFURLConnectionOperation.m in Sources */,

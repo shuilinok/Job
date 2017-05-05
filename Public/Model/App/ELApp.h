@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ServerRequestFactory.h"
+#import "DatabaseRequestFactory.h"
 
 @interface ELApp : NSObject
 
@@ -15,5 +16,8 @@
 
 /* 服务端请求的工厂 */
 + (id<ServerRequestFactory>)serverRequestFactory;
+
+/* 本地数据库请求的工厂 */
++ (id<DatabaseRequestFactory>)dbRequestFactory;
 
 @end

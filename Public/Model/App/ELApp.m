@@ -8,6 +8,7 @@
 
 #import "ELApp.h"
 #import "HttpRequestFactory.h"
+#import "MORequestFactory.h"
 
 @implementation ELApp
 
@@ -26,6 +27,12 @@
 + (id<ServerRequestFactory>)serverRequestFactory
 {
     return [HttpRequestFactory sharedFactory];
+}
+
+/* 本地数据库请求的工厂 */
++ (id<DatabaseRequestFactory>)dbRequestFactory
+{
+    return [MORequestFactory sharedFactory];
 }
 
 @end
