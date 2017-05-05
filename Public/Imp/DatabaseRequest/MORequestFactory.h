@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DatabaseRequestFactory.h"
 
+//CoreData请求工厂
 @interface MORequestFactory : NSObject <DatabaseRequestFactory>
 
 + (instancetype)sharedFactory;

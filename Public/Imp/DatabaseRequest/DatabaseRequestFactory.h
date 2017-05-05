@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+//本地数据库请求抽象工厂
 @protocol DatabaseRequestFactory <NSObject>
 
 @end
