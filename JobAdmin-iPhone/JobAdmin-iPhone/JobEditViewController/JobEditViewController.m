@@ -7,6 +7,8 @@
 //
 
 #import "JobEditViewController.h"
+#import "JobEditListViewController.h"
+#import "AdminJob.h"
 
 @interface JobEditViewController ()
 
@@ -24,6 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    AdminJob *job = [[AdminJob alloc] init];
+    
+    job.title = @"测试";
+    job.city = @"西安";
+    job.company = @"小K科技";
+    
+    [job add:^(NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

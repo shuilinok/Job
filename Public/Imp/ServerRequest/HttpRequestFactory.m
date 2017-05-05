@@ -21,4 +21,9 @@
     return instance;
 }
 
+- (id<JobAddRequest>)jobAddRequest
+{
+    return [[JobAddHttpRequest alloc] init];
+}
+
 @end

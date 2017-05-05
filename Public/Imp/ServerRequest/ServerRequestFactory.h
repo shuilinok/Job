@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JobAddRequest.h"
 
 //
 @protocol ServerRequestFactory <NSObject>
+
+- (id<JobAddRequest>)jobAddRequest;
 
 @end

@@ -52,6 +52,8 @@
 		45F572BE1EBC5E530042BDEA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F572971EBC5E530042BDEA /* MBProgressHUD.m */; };
 		45F572BF1EBC5E530042BDEA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F572991EBC5E530042BDEA /* UIView+Extension.m */; };
 		45F572C01EBC5E530042BDEA /* UNStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5729C1EBC5E530042BDEA /* UNStack.m */; };
+		45F572C31EBC61440042BDEA /* JobAddRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F572C21EBC61440042BDEA /* JobAddRequest.m */; };
+		45F572C71EBC666D0042BDEA /* AdminJob.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F572C61EBC666D0042BDEA /* AdminJob.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +149,10 @@
 		45F572991EBC5E530042BDEA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		45F5729B1EBC5E530042BDEA /* UNStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNStack.h; sourceTree = "<group>"; };
 		45F5729C1EBC5E530042BDEA /* UNStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNStack.m; sourceTree = "<group>"; };
+		45F572C11EBC61440042BDEA /* JobAddRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobAddRequest.h; sourceTree = "<group>"; };
+		45F572C21EBC61440042BDEA /* JobAddRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobAddRequest.m; sourceTree = "<group>"; };
+		45F572C51EBC666D0042BDEA /* AdminJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminJob.h; sourceTree = "<group>"; };
+		45F572C61EBC666D0042BDEA /* AdminJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminJob.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +285,8 @@
 				45F5724C1EBC5E530042BDEA /* HttpRequestManager.h */,
 				45F5724D1EBC5E530042BDEA /* HttpRequestManager.m */,
 				45F5724E1EBC5E530042BDEA /* ServerRequestFactory.h */,
+				45F572C11EBC61440042BDEA /* JobAddRequest.h */,
+				45F572C21EBC61440042BDEA /* JobAddRequest.m */,
 			);
 			path = ServerRequest;
 			sourceTree = "<group>";
@@ -287,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				45F572501EBC5E530042BDEA /* App */,
+				45F572C41EBC66590042BDEA /* AdminJob */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +452,15 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
+		45F572C41EBC66590042BDEA /* AdminJob */ = {
+			isa = PBXGroup;
+			children = (
+				45F572C51EBC666D0042BDEA /* AdminJob.h */,
+				45F572C61EBC666D0042BDEA /* AdminJob.m */,
+			);
+			path = AdminJob;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -531,11 +549,13 @@
 				45F572AE1EBC5E530042BDEA /* UIButton+AFNetworking.m in Sources */,
 				45F572AC1EBC5E530042BDEA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				45F572A11EBC5E530042BDEA /* ELApp.m in Sources */,
+				45F572C71EBC666D0042BDEA /* AdminJob.m in Sources */,
 				45F572B21EBC5E530042BDEA /* UIWebView+AFNetworking.m in Sources */,
 				45F572A01EBC5E530042BDEA /* HttpRequestManager.m in Sources */,
 				45F572BC1EBC5E530042BDEA /* StringHelper.m in Sources */,
 				45F572B51EBC5E530042BDEA /* NSError+MC.m in Sources */,
 				45F5721F1EBC5CAD0042BDEA /* AppDelegate.m in Sources */,
+				45F572C31EBC61440042BDEA /* JobAddRequest.m in Sources */,
 				45F5729E1EBC5E530042BDEA /* MORequestManager.m in Sources */,
 				45F5729D1EBC5E530042BDEA /* MORequestFactory.m in Sources */,
 				45F572BE1EBC5E530042BDEA /* MBProgressHUD.m in Sources */,
