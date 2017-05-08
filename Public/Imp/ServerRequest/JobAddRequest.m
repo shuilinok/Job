@@ -7,7 +7,7 @@
 //
 
 #import "JobAddRequest.h"
-#import "HttpRequestManager.h"
+#import "HttpRequestFactory.h"
 
 @implementation JobAddHttpRequest
 
@@ -23,7 +23,7 @@
     // 将字符串转换成数据
     request.HTTPBody = [param dataUsingEncoding:NSUTF8StringEncoding];
     
-    [[HttpRequestManager sharedManager] sendRequest:request response:^(id data, NSError *error) {
+    [self.factory sendRequest:request response:^(id data, NSError *error) {
         
         NSError *err = nil;
 //        JobInfo *resultInfo = nil;

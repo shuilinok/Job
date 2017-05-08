@@ -26,13 +26,13 @@
 /* 服务端请求的工厂 */
 + (id<ServerRequestFactory>)serverRequestFactory
 {
-    return [HttpRequestFactory sharedFactory];
+    return [HttpRequestFactory sharedInstance];
 }
 
 /* 本地数据库请求的工厂 */
 + (id<DatabaseRequestFactory>)dbRequestFactory
 {
-    return [MORequestFactory sharedFactory];
+    return [MORequestFactory sharedInstance];
 }
 
 @end

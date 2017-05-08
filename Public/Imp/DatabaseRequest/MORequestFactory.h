@@ -12,6 +12,6 @@
 //CoreData请求工厂
 @interface MORequestFactory : NSObject <DatabaseRequestFactory>
 
-+ (instancetype)sharedFactory;
++ (instancetype)sharedInstance;
 
 @end

@@ -32,7 +32,10 @@
 @end
 
 
+@class HttpRequestFactory;
 @interface JobAddHttpRequest : NSObject <JobAddRequest>
+
+@property (weak, nonatomic) HttpRequestFactory *factory;
 
 @property (strong, nonatomic) NSString *title;
 

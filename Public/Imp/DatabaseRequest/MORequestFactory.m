@@ -10,7 +10,7 @@
 
 @implementation MORequestFactory
 
-+ (instancetype)sharedFactory
++ (instancetype)sharedInstance
 {
     static dispatch_once_t once;
     static MORequestFactory *instance;
