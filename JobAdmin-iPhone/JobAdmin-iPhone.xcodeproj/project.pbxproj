@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45155C391EC0465A008C04FC /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C381EC0465A008C04FC /* CellItem.m */; };
+		45155C3C1EC046D2008C04FC /* LabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C3B1EC046D2008C04FC /* LabelFieldCell.m */; };
+		45155C431EC05224008C04FC /* GroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C421EC05224008C04FC /* GroupItem.m */; };
+		45C905CB1EC1AB4D00DEEDD4 /* JobEditItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */; };
+		45C905D01EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C905CF1EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib */; };
+		45D5915F1EC07A2B0007EF0E /* LabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D5915E1EC07A2B0007EF0E /* LabelSectionHeaderView.m */; };
 		45F5721C1EBC5CAD0042BDEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5721B1EBC5CAD0042BDEA /* main.m */; };
 		45F5721F1EBC5CAD0042BDEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5721E1EBC5CAD0042BDEA /* AppDelegate.m */; };
 		45F572251EBC5CAD0042BDEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F572231EBC5CAD0042BDEA /* Main.storyboard */; };
@@ -55,6 +61,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45155C371EC0465A008C04FC /* CellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellItem.h; sourceTree = "<group>"; };
+		45155C381EC0465A008C04FC /* CellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellItem.m; sourceTree = "<group>"; };
+		45155C3A1EC046D2008C04FC /* LabelFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFieldCell.h; sourceTree = "<group>"; };
+		45155C3B1EC046D2008C04FC /* LabelFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldCell.m; sourceTree = "<group>"; };
+		45155C411EC05224008C04FC /* GroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupItem.h; sourceTree = "<group>"; };
+		45155C421EC05224008C04FC /* GroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupItem.m; sourceTree = "<group>"; };
+		45C905C91EC1AB4D00DEEDD4 /* JobEditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobEditItem.h; sourceTree = "<group>"; };
+		45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobEditItem.m; sourceTree = "<group>"; };
+		45C905CF1EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelSectionHeaderView.xib; sourceTree = "<group>"; };
+		45D5915D1EC07A2B0007EF0E /* LabelSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelSectionHeaderView.h; sourceTree = "<group>"; };
+		45D5915E1EC07A2B0007EF0E /* LabelSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelSectionHeaderView.m; sourceTree = "<group>"; };
 		45F572171EBC5CAD0042BDEA /* JobAdmin-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JobAdmin-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F5721B1EBC5CAD0042BDEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		45F5721D1EBC5CAD0042BDEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,11 +177,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45155C2D1EC041F1008C04FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		45155C2E1EC041F1008C04FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45155C361EC0465A008C04FC /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45155C361EC0465A008C04FC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				45155C371EC0465A008C04FC /* CellItem.h */,
+				45155C381EC0465A008C04FC /* CellItem.m */,
+				45155C3A1EC046D2008C04FC /* LabelFieldCell.h */,
+				45155C3B1EC046D2008C04FC /* LabelFieldCell.m */,
+				45D5915D1EC07A2B0007EF0E /* LabelSectionHeaderView.h */,
+				45D5915E1EC07A2B0007EF0E /* LabelSectionHeaderView.m */,
+				45C905C91EC1AB4D00DEEDD4 /* JobEditItem.h */,
+				45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */,
+				45C905CF1EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		45155C401EC0520F008C04FC /* GroupItem */ = {
+			isa = PBXGroup;
+			children = (
+				45155C411EC05224008C04FC /* GroupItem.h */,
+				45155C421EC05224008C04FC /* GroupItem.m */,
+			);
+			path = GroupItem;
+			sourceTree = "<group>";
+		};
 		45F5720E1EBC5CAD0042BDEA = {
 			isa = PBXGroup;
 			children = (
-				45F5723F1EBC5E520042BDEA /* Public */,
 				45F572191EBC5CAD0042BDEA /* JobAdmin-iPhone */,
+				45F5723F1EBC5E520042BDEA /* Public */,
 				45F572181EBC5CAD0042BDEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -226,8 +283,10 @@
 		45F5723F1EBC5E520042BDEA /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				45F572401EBC5E520042BDEA /* Imp */,
+				45155C2D1EC041F1008C04FC /* Controller */,
+				45155C2E1EC041F1008C04FC /* View */,
 				45F5724F1EBC5E530042BDEA /* Model */,
+				45F572401EBC5E520042BDEA /* Imp */,
 				45F572531EBC5E530042BDEA /* Universe */,
 			);
 			name = Public;
@@ -302,6 +361,7 @@
 		45F572531EBC5E530042BDEA /* Universe */ = {
 			isa = PBXGroup;
 			children = (
+				45155C401EC0520F008C04FC /* GroupItem */,
 				45F572541EBC5E530042BDEA /* AFNetworking */,
 				45F5727B1EBC5E530042BDEA /* Callback */,
 				45F5727E1EBC5E530042BDEA /* Command */,
@@ -509,6 +569,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C905D01EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib in Resources */,
 				45F5722A1EBC5CAD0042BDEA /* LaunchScreen.storyboard in Resources */,
 				45F572271EBC5CAD0042BDEA /* Assets.xcassets in Resources */,
 				45F5723A1EBC5D430042BDEA /* JobEdit.storyboard in Resources */,
@@ -523,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45155C431EC05224008C04FC /* GroupItem.m in Sources */,
 				45F572A71EBC5E530042BDEA /* AFURLConnectionOperation.m in Sources */,
 				45F572BA1EBC5E530042BDEA /* DictionaryHelper.m in Sources */,
 				45F5729F1EBC5E530042BDEA /* HttpRequestFactory.m in Sources */,
@@ -536,8 +598,10 @@
 				45F572AD1EBC5E530042BDEA /* UIAlertView+AFNetworking.m in Sources */,
 				45F572AB1EBC5E530042BDEA /* AFNetworkActivityIndicatorManager.m in Sources */,
 				45F572A31EBC5E530042BDEA /* AFHTTPRequestOperationManager.m in Sources */,
+				45155C3C1EC046D2008C04FC /* LabelFieldCell.m in Sources */,
 				45F572AE1EBC5E530042BDEA /* UIButton+AFNetworking.m in Sources */,
 				45F572AC1EBC5E530042BDEA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				45D5915F1EC07A2B0007EF0E /* LabelSectionHeaderView.m in Sources */,
 				45F572A11EBC5E530042BDEA /* ELApp.m in Sources */,
 				45F572C71EBC666D0042BDEA /* AdminJob.m in Sources */,
 				45F572B21EBC5E530042BDEA /* UIWebView+AFNetworking.m in Sources */,
@@ -555,12 +619,14 @@
 				45F572B91EBC5E530042BDEA /* DateHelper.m in Sources */,
 				45F572B11EBC5E530042BDEA /* UIRefreshControl+AFNetworking.m in Sources */,
 				45F572BF1EBC5E530042BDEA /* UIView+Extension.m in Sources */,
+				45C905CB1EC1AB4D00DEEDD4 /* JobEditItem.m in Sources */,
 				45F572B31EBC5E530042BDEA /* Callback.m in Sources */,
 				45F572B81EBC5E530042BDEA /* ColorHelper.m in Sources */,
 				45F572AF1EBC5E530042BDEA /* UIImageView+AFNetworking.m in Sources */,
 				45F572A51EBC5E530042BDEA /* AFNetworkReachabilityManager.m in Sources */,
 				45F572B61EBC5E530042BDEA /* ArrayHelper.m in Sources */,
 				45F5723D1EBC5D650042BDEA /* JobEditListViewController.m in Sources */,
+				45155C391EC0465A008C04FC /* CellItem.m in Sources */,
 				45F572A21EBC5E530042BDEA /* AFHTTPRequestOperation.m in Sources */,
 				45F572B41EBC5E530042BDEA /* MCProtocolCommand.m in Sources */,
 				45F572A41EBC5E530042BDEA /* AFHTTPSessionManager.m in Sources */,

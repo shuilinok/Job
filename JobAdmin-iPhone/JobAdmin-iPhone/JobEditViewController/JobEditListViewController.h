@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JobEditItem.h"
 
 @interface JobEditListViewController : UITableViewController
 
 + (instancetype)instance;
+
+@property (strong, nonatomic) JobEditItem *totalItem;
 
 @end
