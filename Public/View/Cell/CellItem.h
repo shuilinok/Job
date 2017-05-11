@@ -17,10 +17,8 @@
 
 @property (assign, nonatomic) BOOL hidden;
 
-//返回UITableViewCell，参数CellItem,UITableView,NSIndexPath
-@property (strong, nonatomic) MCProtocolCommand *getCellCommand;
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+//返回UITableViewCell,参数3个，CellItem，UITableView，NSIndexPath
+@property (strong, nonatomic) MCProtocolCommand *buildCommand;
 
 @end
 
@@ -29,9 +27,26 @@
 
 @property (assign, nonatomic) CGFloat headerHeight;
 
-//返回UIView，参数SectionItem,UITableView,@(section)
-@property (strong, nonatomic) MCProtocolCommand *getHeaderCommand;
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
+//返回UIView，参数3个，SectionItem,UITableView,@(section)
+@property (strong, nonatomic) MCProtocolCommand *buildHeaderCommand;
 
 @end
+
+
+
+
+@interface LabelFieldCellItem : CellItem
+
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *content;
+@property (strong, nonatomic) NSString *contentTip;//编辑框中的提示
+
+@end
+
+
+@interface LabelSectionItem : SectionItem
+
+@property (strong, nonatomic) NSString *title;
+
+@end
+

@@ -39,11 +39,6 @@
     return nil;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [self.getCellCommand execute:3,self,tableView,indexPath];
-}
-
 @end
 
 
@@ -80,10 +75,21 @@
     return nil;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    return [self.getHeaderCommand execute:3,self,tableView,@(section)];
-}
+@end
+
+
+
+@implementation LabelFieldCellItem
 
 @end
+
+
+@implementation LabelSectionItem
+
+
+@end
+
+
+
+
 

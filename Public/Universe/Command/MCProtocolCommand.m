@@ -53,7 +53,7 @@
     [invocation invoke];
 
     //返回值
-    id value;
+    __unsafe_unretained id value;
     
     [invocation getReturnValue:&value];
     

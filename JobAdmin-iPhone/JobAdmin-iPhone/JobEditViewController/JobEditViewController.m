@@ -13,6 +13,7 @@
 
 @interface JobEditViewController ()
 @property (strong, nonatomic) JobEditItem *totalItem;
+@property (strong, nonatomic) JobEditListViewController *listController;
 @end
 
 @implementation JobEditViewController
@@ -28,15 +29,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    AdminJob *job = [[AdminJob alloc] init];
+    self.listController = [self createListController];
     
-    job.title = @"测试";
-    job.city = @"西安";
-    job.company = @"小K科技";
+    self.totalItem = [self createJobEditItem];
     
-    [job add:^(NSError *error) {
-        
-    }];
+    self.listController.totalItem = self.totalItem;
+    
+//    AdminJob *job = [[AdminJob alloc] init];
+//    
+//    job.title = @"测试";
+//    job.city = @"西安";
+//    job.company = @"小K科技";
+//    
+//    [job add:^(NSError *error) {
+//        
+//    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,45 +62,101 @@
 }
 */
 
+- (JobEditListViewController *)createListController
+{
+    JobEditListViewController *listController = [JobEditListViewController instance];
+    
+    [self addChildViewController:listController];
+    [self.view addSubview:listController.view];
+    
+    return listController;
+}
+
+- (LabelSectionItem *)createBasicItem
+{
+    LabelSectionItem *item = [[LabelSectionItem alloc] init];
+    item.headerHeight = 40;
+    item.title = @"基本信息";
+    item.buildHeaderCommand = [MCProtocolCommand command:self selector:@selector(labelSectionItem:tableView:viewForHeaderInSection:)];
+    
+    return item;
+}
+
+- (LabelSectionItem *)createContentItem
+{
+    LabelSectionItem *item = [[LabelSectionItem alloc] init];
+    item.headerHeight = 40;
+    item.title = @"具体信息";
+    item.buildHeaderCommand = [MCProtocolCommand command:self selector:@selector(labelSectionItem:tableView:viewForHeaderInSection:)];
+    
+    return item;
+}
+
+- (LabelFieldCellItem *)createPositionItem
+{
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.height = 50;
+    item.buildCommand = [MCProtocolCommand command:self selector:@selector(labelFieldCellItem:tableView:cellForRowAtIndexPath:)];
+    
+    return item;
+}
+
+- (LabelFieldCellItem *)createCityItem
+{
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.height = 50;
+    item.buildCommand = [MCProtocolCommand command:self selector:@selector(labelFieldCellItem:tableView:cellForRowAtIndexPath:)];
+    
+    return item;
+}
+
+- (LabelFieldCellItem *)createCompanyItem
+{
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.height = 50;
+    item.buildCommand = [MCProtocolCommand command:self selector:@selector(labelFieldCellItem:tableView:cellForRowAtIndexPath:)];
+    
+    return item;
+}
+
 - (JobEditItem *)createJobEditItem
 {
     JobEditItem *totalItem = [[JobEditItem alloc] init];
     
-    LabelSectionItem *basicItem = [[LabelSectionItem alloc] init];
+    LabelSectionItem *basicItem = [self createBasicItem];
     totalItem.basicItem = basicItem;
-    LabelSectionItem *contentItem = [[LabelSectionItem alloc] init];
+    
+    LabelSectionItem *contentItem = [self createContentItem];
     totalItem.contentItem = contentItem;
     
-    //值
-    basicItem.getHeaderCommand = [MCProtocolCommand command:self selector:@selector(basicItem:getHeaderView:section:)];
-    
-    //
-    LabelFieldCellItem *positionItem = [[LabelFieldCellItem alloc] init];
-    positionItem.getCellCommand = [MCProtocolCommand command:self selector:@selector(positionItem:getCell:indexPath:)];
-    
+    LabelFieldCellItem *positionItem = [self createPositionItem];
     totalItem.positionItem = positionItem;
     
-    LabelFieldCellItem *cityItem = [[LabelFieldCellItem alloc] init];
+    LabelFieldCellItem *cityItem = [self createCityItem];
     totalItem.cityItem = cityItem;
     
-    LabelFieldCellItem *companyItem = [[LabelFieldCellItem alloc] init];
+    LabelFieldCellItem *companyItem = [self createCompanyItem];
     totalItem.companyItem = companyItem;
     
     return totalItem;
 }
 
-- (id)basicItem:(SectionItem *)sectionItem getHeaderView:(UITableView *)tableView section:(NSInteger)section
-{
-    LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:@"LabelSectionHeaderView" owner:nil options:nil] lastObject];
-    
-    return v;
-}
-
-- (id)positionItem:(CellItem *)cellItem getCell:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)labelFieldCellItem:(LabelFieldCellItem *)item tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LabelFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelFieldCell" forIndexPath:indexPath];
     
+    cell.item = item;
+    
     return cell;
+}
+
+- (UIView *)labelSectionItem:(LabelSectionItem *)item tableView:(UITableView *)tableView viewForHeaderInSection:(NSNumber *)section
+{
+    LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:@"LabelSectionHeaderView" owner:nil options:nil] lastObject];
+    
+    v.item = item;
+    
+    return v;
 }
 
 @end

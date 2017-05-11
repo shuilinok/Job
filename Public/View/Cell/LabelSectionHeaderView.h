@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CellItem.h"
 
-@interface LabelSectionItem : SectionItem
-
-@property (strong, nonatomic) NSString *title;
-
-@end
-
 
 //纯文本
 @interface LabelSectionHeaderView : UIView

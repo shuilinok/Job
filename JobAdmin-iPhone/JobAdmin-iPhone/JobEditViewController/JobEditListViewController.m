@@ -16,7 +16,7 @@
 
 + (instancetype)instance
 {
-    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Job" bundle:nil];
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"JobEdit" bundle:nil];
     
     JobEditListViewController *vc = [storyBoard instantiateViewControllerWithIdentifier:@"JobEditListViewController"];
     
@@ -62,16 +62,17 @@
     SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     CellItem *cellItem = [sectionItem itemAtIndex:row];
     
-    UITableViewCell *cell = [cellItem tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = [cellItem.buildCommand execute:3,cellItem,tableView,indexPath];
     
     return cell;
+    
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
-    UIView *headerView = [sectionItem tableView:tableView viewForHeaderInSection:section];
+    UIView *headerView = [sectionItem.buildHeaderCommand execute:3,sectionItem,tableView,@(section)];
     
     return headerView;
 }

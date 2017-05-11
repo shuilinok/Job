@@ -32,4 +32,6 @@
 
 @interface GroupItem : NSObject <GroupItem>
 
+@property (weak, nonatomic) id<GroupItem> parentItem;
+
 @end

@@ -9,20 +9,6 @@
 #import "LabelFieldCell.h"
 
 
-@implementation LabelFieldCellItem
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    LabelFieldCell *cell = (LabelFieldCell *)[super tableView:tableView cellForRowAtIndexPath:indexPath];
-    
-    cell.item = self;
-    
-    return cell;
-}
-
-@end
-
-
 @interface LabelFieldCell ()
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UITextField *contentField;

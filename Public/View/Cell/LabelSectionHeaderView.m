@@ -9,12 +9,6 @@
 #import "LabelSectionHeaderView.h"
 
 
-@implementation LabelSectionItem
-
-
-@end
-
-
 @interface LabelSectionHeaderView ()
 @property (strong, nonatomic) IBOutlet UILabel *label;
 @end
