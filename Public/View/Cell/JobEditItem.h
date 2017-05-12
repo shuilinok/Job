@@ -8,25 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "GroupItem.h"
-#import "LabelFieldXibCellItem.h"
-#import "LabelXibSectionItem.h"
+#import "KindCellItem.h"
 
 @interface JobEditItem : NSObject <GroupItem>
 
-@property (strong, nonatomic) LabelXibSectionItem *basicItem;
+@property (strong, nonatomic) LabelSectionItem *basicItem;
 
-@property (strong, nonatomic) LabelXibSectionItem *contentItem;
+@property (strong, nonatomic) LabelSectionItem *contentItem;
 
 
-@property (strong, nonatomic) LabelFieldXibCellItem *positionItem;
+@property (strong, nonatomic) LabelFieldCellItem *positionItem;
 
-@property (strong, nonatomic) LabelFieldXibCellItem *cityItem;
+@property (strong, nonatomic) LabelFieldCellItem *cityItem;
 
-@property (strong, nonatomic) LabelFieldXibCellItem *companyItem;
+@property (strong, nonatomic) LabelFieldCellItem *companyItem;
 
 @end
-
-
 
 
 

@@ -7,16 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CellItem.h"
+#import "KindCellItem.h"
 #import "LabelFieldCell.h"
 
-@interface LabelFieldXibCellItem : CellItem
+@interface LabelFieldXibCellItem : LabelFieldCellItem
 
 @property (strong, nonatomic) NSString *cellIdentifier;
-
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *content;
-@property (strong, nonatomic) NSString *contentTip;//编辑框中的提示
 
 @property (weak, readonly, nonatomic) LabelFieldCell *cell;
 

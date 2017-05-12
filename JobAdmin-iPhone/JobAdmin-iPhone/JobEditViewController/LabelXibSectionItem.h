@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CellItem.h"
+#import "KindCellItem.h"
 #import "LabelSectionHeaderView.h"
 
-@interface LabelXibSectionItem : SectionItem
+@interface LabelXibSectionItem : LabelSectionItem
 
 @property (strong, nonatomic) NSString *xibName;
-
-@property (strong, nonatomic) NSString *title;
 
 @property (weak, readonly, nonatomic) LabelSectionHeaderView *headerView;
 

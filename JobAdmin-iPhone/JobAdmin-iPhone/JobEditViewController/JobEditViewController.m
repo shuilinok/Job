@@ -10,6 +10,9 @@
 #import "JobEditListViewController.h"
 #import "JobEditItem.h"
 #import "AdminJob.h"
+#import "LabelFieldXibCellItem.h"
+#import "LabelXibSectionItem.h"
+#import "BarTextButtonItem.h"
 
 @interface JobEditViewController ()
 @property (strong, nonatomic) JobEditItem *totalItem;
@@ -29,21 +32,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.rightBarButtonItem = [self createRightBarItem];
+    
     self.listController = [self createListController];
     
     self.totalItem = [self createJobEditItem];
     
     self.listController.totalItem = self.totalItem;
-    
-//    AdminJob *job = [[AdminJob alloc] init];
-//    
-//    job.title = @"测试";
-//    job.city = @"西安";
-//    job.company = @"小K科技";
-//    
-//    [job add:^(NSError *error) {
-//        
-//    }];
 
 }
 
@@ -61,6 +56,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (BarTextButtonItem *)createRightBarItem
+{
+    BarTextButtonItem *item = [BarTextButtonItem instance];
+    item.titleText = @"保存";
+    item.clickCommand = [MCProtocolCommand command:self selector:@selector(rightBarButtonClicked:)];
+    
+    return item;
+}
 
 - (JobEditListViewController *)createListController
 {
@@ -96,6 +100,8 @@
 - (LabelFieldXibCellItem *)createPositionItem
 {
     LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    item.name = @"title:";
+    item.contentTip = @"请输入title";
     item.cellIdentifier = @"LabelFieldCell";
     item.height = 50;
     
@@ -106,6 +112,8 @@
 - (LabelFieldXibCellItem *)createCityItem
 {
     LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    item.name = @"城市:";
+    item.contentTip = @"请输入城市";
     item.cellIdentifier = @"LabelFieldCell";
     item.height = 50;
     
@@ -115,6 +123,8 @@
 - (LabelFieldXibCellItem *)createCompanyItem
 {
     LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    item.name = @"公司:";
+    item.contentTip = @"请输入公司名称";
     item.cellIdentifier = @"LabelFieldCell";
     item.height = 50;
     
@@ -144,5 +154,28 @@
     return totalItem;
 }
 
+- (id)rightBarButtonClicked:(BarTextButtonItem *)item
+{
+    NSString *title = self.totalItem.positionItem.content;
+    NSString *city = self.totalItem.cityItem.content;
+    NSString *company = self.totalItem.companyItem.content;
+    
+    if(title.length == 0 || city.length == 0 || company.length == 0)
+    {
+        NSLog(@"请把信息输入完整");
+        return nil;
+    }
+    
+    AdminJob *job = [[AdminJob alloc] init];
 
+    job.title = title;
+    job.city = city;
+    job.company = company;
+
+    [job add:^(NSError *error) {
+        
+    }];
+    
+    return nil;
+}
 @end

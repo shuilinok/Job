@@ -19,6 +19,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.nameLabel.adjustsFontSizeToFitWidth = YES;
     
     [self.contentField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
