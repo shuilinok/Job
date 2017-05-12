@@ -10,7 +10,7 @@
 
 
 @interface LabelSectionHeaderView ()
-@property (strong, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation LabelSectionHeaderView
@@ -22,12 +22,5 @@
     // Drawing code
 }
 */
-
-- (void)setItem:(LabelSectionItem *)item
-{
-    _item = item;
-    
-    self.label.text = item.title;
-}
 
 @end

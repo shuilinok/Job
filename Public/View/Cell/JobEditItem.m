@@ -36,14 +36,14 @@
     return nil;
 }
 
-- (void)setBasicItem:(LabelSectionItem *)basicItem
+- (void)setBasicItem:(LabelXibSectionItem *)basicItem
 {
     [self.groupItem addItem:basicItem elseRemoveItem:_basicItem];
     
     _basicItem = basicItem;
 }
 
-- (void)setContentItem:(LabelSectionItem *)contentItem
+- (void)setContentItem:(LabelXibSectionItem *)contentItem
 {
     [self.groupItem addItem:contentItem elseRemoveItem:_contentItem];
     
@@ -51,21 +51,21 @@
 }
 
 
-- (void)setPositionItem:(LabelFieldCellItem *)positionItem
+- (void)setPositionItem:(LabelFieldXibCellItem *)positionItem
 {
     [self.basicItem addItem:positionItem elseRemoveItem:_positionItem];
     
     _positionItem = positionItem;
 }
 
-- (void)setCityItem:(LabelFieldCellItem *)cityItem
+- (void)setCityItem:(LabelFieldXibCellItem *)cityItem
 {
     [self.basicItem addItem:cityItem elseRemoveItem:_cityItem];
     
     _cityItem = cityItem;
 }
 
-- (void)setCompanyItem:(LabelFieldCellItem *)companyItem
+- (void)setCompanyItem:(LabelFieldXibCellItem *)companyItem
 {
     [self.contentItem addItem:companyItem elseRemoveItem:_companyItem];
     

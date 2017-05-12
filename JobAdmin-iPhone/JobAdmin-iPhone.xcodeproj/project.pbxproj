@@ -10,6 +10,8 @@
 		45155C391EC0465A008C04FC /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C381EC0465A008C04FC /* CellItem.m */; };
 		45155C3C1EC046D2008C04FC /* LabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C3B1EC046D2008C04FC /* LabelFieldCell.m */; };
 		45155C431EC05224008C04FC /* GroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C421EC05224008C04FC /* GroupItem.m */; };
+		456AF0691EC55E99003410D6 /* LabelFieldXibCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0681EC55E99003410D6 /* LabelFieldXibCellItem.m */; };
+		456AF06C1EC55EDB003410D6 /* LabelXibSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF06B1EC55EDB003410D6 /* LabelXibSectionItem.m */; };
 		45C905CB1EC1AB4D00DEEDD4 /* JobEditItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */; };
 		45C905D01EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C905CF1EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib */; };
 		45D5915F1EC07A2B0007EF0E /* LabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D5915E1EC07A2B0007EF0E /* LabelSectionHeaderView.m */; };
@@ -67,6 +69,10 @@
 		45155C3B1EC046D2008C04FC /* LabelFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldCell.m; sourceTree = "<group>"; };
 		45155C411EC05224008C04FC /* GroupItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupItem.h; sourceTree = "<group>"; };
 		45155C421EC05224008C04FC /* GroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupItem.m; sourceTree = "<group>"; };
+		456AF0671EC55E99003410D6 /* LabelFieldXibCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFieldXibCellItem.h; sourceTree = "<group>"; };
+		456AF0681EC55E99003410D6 /* LabelFieldXibCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldXibCellItem.m; sourceTree = "<group>"; };
+		456AF06A1EC55EDB003410D6 /* LabelXibSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelXibSectionItem.h; sourceTree = "<group>"; };
+		456AF06B1EC55EDB003410D6 /* LabelXibSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelXibSectionItem.m; sourceTree = "<group>"; };
 		45C905C91EC1AB4D00DEEDD4 /* JobEditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobEditItem.h; sourceTree = "<group>"; };
 		45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobEditItem.m; sourceTree = "<group>"; };
 		45C905CF1EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelSectionHeaderView.xib; sourceTree = "<group>"; };
@@ -204,6 +210,10 @@
 				45C905C91EC1AB4D00DEEDD4 /* JobEditItem.h */,
 				45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */,
 				45C905CF1EC1C9D600DEEDD4 /* LabelSectionHeaderView.xib */,
+				456AF0671EC55E99003410D6 /* LabelFieldXibCellItem.h */,
+				456AF0681EC55E99003410D6 /* LabelFieldXibCellItem.m */,
+				456AF06A1EC55EDB003410D6 /* LabelXibSectionItem.h */,
+				456AF06B1EC55EDB003410D6 /* LabelXibSectionItem.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -607,6 +617,7 @@
 				45F572B21EBC5E530042BDEA /* UIWebView+AFNetworking.m in Sources */,
 				45F572BC1EBC5E530042BDEA /* StringHelper.m in Sources */,
 				45F572B51EBC5E530042BDEA /* NSError+MC.m in Sources */,
+				456AF06C1EC55EDB003410D6 /* LabelXibSectionItem.m in Sources */,
 				45F5721F1EBC5CAD0042BDEA /* AppDelegate.m in Sources */,
 				45F572C31EBC61440042BDEA /* JobAddRequest.m in Sources */,
 				45F5729D1EBC5E530042BDEA /* MORequestFactory.m in Sources */,
@@ -614,6 +625,7 @@
 				45F572AA1EBC5E530042BDEA /* AFURLSessionManager.m in Sources */,
 				45F572A91EBC5E530042BDEA /* AFURLResponseSerialization.m in Sources */,
 				45F572381EBC5D2B0042BDEA /* JobEditViewController.m in Sources */,
+				456AF0691EC55E99003410D6 /* LabelFieldXibCellItem.m in Sources */,
 				45F5721C1EBC5CAD0042BDEA /* main.m in Sources */,
 				45F572A81EBC5E530042BDEA /* AFURLRequestSerialization.m in Sources */,
 				45F572B91EBC5E530042BDEA /* DateHelper.m in Sources */,

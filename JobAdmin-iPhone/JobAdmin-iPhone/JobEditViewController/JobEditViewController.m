@@ -72,49 +72,52 @@
     return listController;
 }
 
-- (LabelSectionItem *)createBasicItem
+- (LabelXibSectionItem *)createBasicItem
 {
-    LabelSectionItem *item = [[LabelSectionItem alloc] init];
+    LabelXibSectionItem *item = [[LabelXibSectionItem alloc] init];
+    item.xibName = @"LabelSectionHeaderView";
     item.headerHeight = 40;
     item.title = @"基本信息";
-    item.buildHeaderCommand = [MCProtocolCommand command:self selector:@selector(labelSectionItem:tableView:viewForHeaderInSection:)];
     
     return item;
 }
 
-- (LabelSectionItem *)createContentItem
+- (LabelXibSectionItem *)createContentItem
 {
-    LabelSectionItem *item = [[LabelSectionItem alloc] init];
+    LabelXibSectionItem *item = [[LabelXibSectionItem alloc] init];
+    item.xibName = @"LabelSectionHeaderView";
     item.headerHeight = 40;
     item.title = @"具体信息";
-    item.buildHeaderCommand = [MCProtocolCommand command:self selector:@selector(labelSectionItem:tableView:viewForHeaderInSection:)];
+    
     
     return item;
 }
 
-- (LabelFieldCellItem *)createPositionItem
+- (LabelFieldXibCellItem *)createPositionItem
 {
-    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    item.cellIdentifier = @"LabelFieldCell";
     item.height = 50;
-    item.buildCommand = [MCProtocolCommand command:self selector:@selector(labelFieldCellItem:tableView:cellForRowAtIndexPath:)];
+    
     
     return item;
 }
 
-- (LabelFieldCellItem *)createCityItem
+- (LabelFieldXibCellItem *)createCityItem
 {
-    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    item.cellIdentifier = @"LabelFieldCell";
     item.height = 50;
-    item.buildCommand = [MCProtocolCommand command:self selector:@selector(labelFieldCellItem:tableView:cellForRowAtIndexPath:)];
     
     return item;
 }
 
-- (LabelFieldCellItem *)createCompanyItem
+- (LabelFieldXibCellItem *)createCompanyItem
 {
-    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    item.cellIdentifier = @"LabelFieldCell";
     item.height = 50;
-    item.buildCommand = [MCProtocolCommand command:self selector:@selector(labelFieldCellItem:tableView:cellForRowAtIndexPath:)];
+    
     
     return item;
 }
@@ -123,40 +126,23 @@
 {
     JobEditItem *totalItem = [[JobEditItem alloc] init];
     
-    LabelSectionItem *basicItem = [self createBasicItem];
+    LabelXibSectionItem *basicItem = [self createBasicItem];
     totalItem.basicItem = basicItem;
     
-    LabelSectionItem *contentItem = [self createContentItem];
+    LabelXibSectionItem *contentItem = [self createContentItem];
     totalItem.contentItem = contentItem;
     
-    LabelFieldCellItem *positionItem = [self createPositionItem];
+    LabelFieldXibCellItem *positionItem = [self createPositionItem];
     totalItem.positionItem = positionItem;
     
-    LabelFieldCellItem *cityItem = [self createCityItem];
+    LabelFieldXibCellItem *cityItem = [self createCityItem];
     totalItem.cityItem = cityItem;
     
-    LabelFieldCellItem *companyItem = [self createCompanyItem];
+    LabelFieldXibCellItem *companyItem = [self createCompanyItem];
     totalItem.companyItem = companyItem;
     
     return totalItem;
 }
 
-- (UITableViewCell *)labelFieldCellItem:(LabelFieldCellItem *)item tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    LabelFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelFieldCell" forIndexPath:indexPath];
-    
-    cell.item = item;
-    
-    return cell;
-}
-
-- (UIView *)labelSectionItem:(LabelSectionItem *)item tableView:(UITableView *)tableView viewForHeaderInSection:(NSNumber *)section
-{
-    LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:@"LabelSectionHeaderView" owner:nil options:nil] lastObject];
-    
-    v.item = item;
-    
-    return v;
-}
 
 @end

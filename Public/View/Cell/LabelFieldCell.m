@@ -10,8 +10,7 @@
 
 
 @interface LabelFieldCell ()
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UITextField *contentField;
+
 @end
 
 
@@ -30,18 +29,9 @@
     // Configure the view for the selected state
 }
 
-- (void)setItem:(LabelFieldCellItem *)item
-{
-    _item = item;
-    
-    self.nameLabel.text = item.name;
-    self.contentField.placeholder = item.contentTip;
-    self.contentField.text = item.content;
-}
-
 - (void)textFieldDidChange:(id)sender
 {
-    self.item.content = self.contentField.text;
+    [self.fieldTextChangedCommand execute:1,self.contentField.text];
 }
 
 @end

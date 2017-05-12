@@ -39,6 +39,12 @@
     return nil;
 }
 
+- (UITableViewCell *)buildCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView
+{
+    abort();
+    return nil;
+}
+
 @end
 
 
@@ -75,19 +81,14 @@
     return nil;
 }
 
-@end
-
-
-
-@implementation LabelFieldCellItem
-
-@end
-
-
-@implementation LabelSectionItem
-
+- (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView
+{
+    abort();
+    return nil;
+}
 
 @end
+
 
 
 

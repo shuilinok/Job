@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CellItem.h"
 
 
 //纯文本
 @interface LabelSectionHeaderView : UIView
 
-@property (strong, nonatomic) LabelSectionItem *item;
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 @end

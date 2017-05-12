@@ -62,7 +62,7 @@
     SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     CellItem *cellItem = [sectionItem itemAtIndex:row];
     
-    UITableViewCell *cell = [cellItem.buildCommand execute:3,cellItem,tableView,indexPath];
+    UITableViewCell *cell = [cellItem buildCellAtIndexPath:indexPath tableView:tableView];
     
     return cell;
     
@@ -72,7 +72,7 @@
 {
     SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
-    UIView *headerView = [sectionItem.buildHeaderCommand execute:3,sectionItem,tableView,@(section)];
+    UIView *headerView = [sectionItem buildHeaderAtSection:section tableView:tableView];
     
     return headerView;
 }
