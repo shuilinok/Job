@@ -10,8 +10,7 @@
 #import "JobEditListViewController.h"
 #import "JobEditItem.h"
 #import "AdminJob.h"
-#import "LabelFieldXibCellItem.h"
-#import "LabelXibSectionItem.h"
+#import "KindCellItem.h"
 #import "BarTextButtonItem.h"
 
 @interface JobEditViewController ()
@@ -76,57 +75,48 @@
     return listController;
 }
 
-- (LabelXibSectionItem *)createBasicItem
+- (LabelSectionItem *)createBasicItem
 {
-    LabelXibSectionItem *item = [[LabelXibSectionItem alloc] init];
-    item.xibName = @"LabelSectionHeaderView";
-    item.headerHeight = 40;
+    LabelSectionItem *item = [[LabelSectionItem alloc] init];
     item.title = @"基本信息";
     
     return item;
 }
 
-- (LabelXibSectionItem *)createContentItem
+- (LabelSectionItem *)createContentItem
 {
-    LabelXibSectionItem *item = [[LabelXibSectionItem alloc] init];
-    item.xibName = @"LabelSectionHeaderView";
-    item.headerHeight = 40;
+    LabelSectionItem *item = [[LabelSectionItem alloc] init];
     item.title = @"具体信息";
-    
     
     return item;
 }
 
-- (LabelFieldXibCellItem *)createPositionItem
+- (LabelFieldCellItem *)createPositionItem
 {
-    LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"title:";
     item.contentTip = @"请输入title";
     item.cellIdentifier = @"LabelFieldCell";
-    item.height = 50;
-    
     
     return item;
 }
 
-- (LabelFieldXibCellItem *)createCityItem
+- (LabelFieldCellItem *)createCityItem
 {
-    LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"城市:";
     item.contentTip = @"请输入城市";
     item.cellIdentifier = @"LabelFieldCell";
-    item.height = 50;
     
     return item;
 }
 
-- (LabelFieldXibCellItem *)createCompanyItem
+- (LabelFieldCellItem *)createCompanyItem
 {
-    LabelFieldXibCellItem *item = [[LabelFieldXibCellItem alloc] init];
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"公司:";
     item.contentTip = @"请输入公司名称";
     item.cellIdentifier = @"LabelFieldCell";
-    item.height = 50;
     
     
     return item;
@@ -136,19 +126,19 @@
 {
     JobEditItem *totalItem = [[JobEditItem alloc] init];
     
-    LabelXibSectionItem *basicItem = [self createBasicItem];
+    LabelSectionItem *basicItem = [self createBasicItem];
     totalItem.basicItem = basicItem;
     
-    LabelXibSectionItem *contentItem = [self createContentItem];
+    LabelSectionItem *contentItem = [self createContentItem];
     totalItem.contentItem = contentItem;
     
-    LabelFieldXibCellItem *positionItem = [self createPositionItem];
+    LabelFieldCellItem *positionItem = [self createPositionItem];
     totalItem.positionItem = positionItem;
     
-    LabelFieldXibCellItem *cityItem = [self createCityItem];
+    LabelFieldCellItem *cityItem = [self createCityItem];
     totalItem.cityItem = cityItem;
     
-    LabelFieldXibCellItem *companyItem = [self createCompanyItem];
+    LabelFieldCellItem *companyItem = [self createCompanyItem];
     totalItem.companyItem = companyItem;
     
     return totalItem;

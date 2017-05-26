@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		45155C431EC05224008C04FC /* GroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C421EC05224008C04FC /* GroupItem.m */; };
 		456AF0BA1EC587BC003410D6 /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0B91EC587BC003410D6 /* CellItem.m */; };
-		456AF0BD1EC58F62003410D6 /* KindCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0BC1EC58F62003410D6 /* KindCellItem.m */; };
-		456AF0C71EC5916C003410D6 /* LabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0C01EC5916C003410D6 /* LabelFieldCell.m */; };
-		456AF0C81EC5916C003410D6 /* LabelFieldXibCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0C11EC5916C003410D6 /* LabelFieldXibCellItem.m */; };
-		456AF0C91EC5916C003410D6 /* LabelXibSectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0C21EC5916C003410D6 /* LabelXibSectionItem.m */; };
-		456AF0CA1EC5916C003410D6 /* LabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0C31EC5916C003410D6 /* LabelSectionHeaderView.m */; };
-		456AF0CB1EC5916C003410D6 /* LabelSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456AF0C61EC5916C003410D6 /* LabelSectionHeaderView.xib */; };
 		456AF0D21EC597ED003410D6 /* BarTextButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0D11EC597ED003410D6 /* BarTextButtonItem.m */; };
-		45C905CB1EC1AB4D00DEEDD4 /* JobEditItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */; };
+		45BA35511ED8050F003A50EF /* JobEditItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA35501ED8050F003A50EF /* JobEditItem.m */; };
+		45BA35551ED80A30003A50EF /* KindCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA35541ED80A30003A50EF /* KindCellItem.m */; };
+		45BA35591ED80A90003A50EF /* LabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA35571ED80A90003A50EF /* LabelFieldCell.m */; };
+		45BA355D1ED80B4A003A50EF /* LabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA355A1ED80B4A003A50EF /* LabelSectionHeaderView.m */; };
+		45BA355E1ED80B4A003A50EF /* LabelSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BA355C1ED80B4A003A50EF /* LabelSectionHeaderView.xib */; };
 		45F5721C1EBC5CAD0042BDEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5721B1EBC5CAD0042BDEA /* main.m */; };
 		45F5721F1EBC5CAD0042BDEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F5721E1EBC5CAD0042BDEA /* AppDelegate.m */; };
 		45F572251EBC5CAD0042BDEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F572231EBC5CAD0042BDEA /* Main.storyboard */; };
@@ -69,21 +67,18 @@
 		45155C421EC05224008C04FC /* GroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupItem.m; sourceTree = "<group>"; };
 		456AF0B81EC587BC003410D6 /* CellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellItem.h; sourceTree = "<group>"; };
 		456AF0B91EC587BC003410D6 /* CellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellItem.m; sourceTree = "<group>"; };
-		456AF0BB1EC58F62003410D6 /* KindCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KindCellItem.h; sourceTree = "<group>"; };
-		456AF0BC1EC58F62003410D6 /* KindCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KindCellItem.m; sourceTree = "<group>"; };
-		456AF0BE1EC5916C003410D6 /* LabelXibSectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelXibSectionItem.h; sourceTree = "<group>"; };
-		456AF0BF1EC5916C003410D6 /* LabelFieldXibCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFieldXibCellItem.h; sourceTree = "<group>"; };
-		456AF0C01EC5916C003410D6 /* LabelFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldCell.m; sourceTree = "<group>"; };
-		456AF0C11EC5916C003410D6 /* LabelFieldXibCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldXibCellItem.m; sourceTree = "<group>"; };
-		456AF0C21EC5916C003410D6 /* LabelXibSectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelXibSectionItem.m; sourceTree = "<group>"; };
-		456AF0C31EC5916C003410D6 /* LabelSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelSectionHeaderView.m; sourceTree = "<group>"; };
-		456AF0C41EC5916C003410D6 /* LabelFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFieldCell.h; sourceTree = "<group>"; };
-		456AF0C51EC5916C003410D6 /* LabelSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelSectionHeaderView.h; sourceTree = "<group>"; };
-		456AF0C61EC5916C003410D6 /* LabelSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelSectionHeaderView.xib; sourceTree = "<group>"; };
 		456AF0D01EC597ED003410D6 /* BarTextButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarTextButtonItem.h; sourceTree = "<group>"; };
 		456AF0D11EC597ED003410D6 /* BarTextButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarTextButtonItem.m; sourceTree = "<group>"; };
-		45C905C91EC1AB4D00DEEDD4 /* JobEditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobEditItem.h; sourceTree = "<group>"; };
-		45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobEditItem.m; sourceTree = "<group>"; };
+		45BA354B1ED7FE9C003A50EF /* EditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItem.h; sourceTree = "<group>"; };
+		45BA354F1ED8050F003A50EF /* JobEditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobEditItem.h; sourceTree = "<group>"; };
+		45BA35501ED8050F003A50EF /* JobEditItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobEditItem.m; sourceTree = "<group>"; };
+		45BA35541ED80A30003A50EF /* KindCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KindCellItem.m; sourceTree = "<group>"; };
+		45BA35561ED80A71003A50EF /* KindCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KindCellItem.h; sourceTree = "<group>"; };
+		45BA35571ED80A90003A50EF /* LabelFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldCell.m; sourceTree = "<group>"; };
+		45BA35581ED80A90003A50EF /* LabelFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFieldCell.h; sourceTree = "<group>"; };
+		45BA355A1ED80B4A003A50EF /* LabelSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelSectionHeaderView.m; sourceTree = "<group>"; };
+		45BA355B1ED80B4A003A50EF /* LabelSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelSectionHeaderView.h; sourceTree = "<group>"; };
+		45BA355C1ED80B4A003A50EF /* LabelSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelSectionHeaderView.xib; sourceTree = "<group>"; };
 		45F572171EBC5CAD0042BDEA /* JobAdmin-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JobAdmin-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F5721B1EBC5CAD0042BDEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		45F5721D1EBC5CAD0042BDEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -199,19 +194,10 @@
 		45155C2E1EC041F1008C04FC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				45BA354E1ED8050F003A50EF /* JobEditItem */,
 				456AF0CC1EC5959C003410D6 /* BarButton */,
-				45155C361EC0465A008C04FC /* Cell */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		45155C361EC0465A008C04FC /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				45C905C91EC1AB4D00DEEDD4 /* JobEditItem.h */,
-				45C905CA1EC1AB4D00DEEDD4 /* JobEditItem.m */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		45155C401EC0520F008C04FC /* GroupItem */ = {
@@ -228,8 +214,6 @@
 			children = (
 				456AF0B81EC587BC003410D6 /* CellItem.h */,
 				456AF0B91EC587BC003410D6 /* CellItem.m */,
-				456AF0BB1EC58F62003410D6 /* KindCellItem.h */,
-				456AF0BC1EC58F62003410D6 /* KindCellItem.m */,
 			);
 			path = CellItem;
 			sourceTree = "<group>";
@@ -241,6 +225,37 @@
 				456AF0D11EC597ED003410D6 /* BarTextButtonItem.m */,
 			);
 			path = BarButton;
+			sourceTree = "<group>";
+		};
+		45BA354A1ED7FE63003A50EF /* EditItem */ = {
+			isa = PBXGroup;
+			children = (
+				45BA354B1ED7FE9C003A50EF /* EditItem.h */,
+			);
+			path = EditItem;
+			sourceTree = "<group>";
+		};
+		45BA354E1ED8050F003A50EF /* JobEditItem */ = {
+			isa = PBXGroup;
+			children = (
+				45BA354F1ED8050F003A50EF /* JobEditItem.h */,
+				45BA35501ED8050F003A50EF /* JobEditItem.m */,
+			);
+			path = JobEditItem;
+			sourceTree = "<group>";
+		};
+		45BA35521ED80A24003A50EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45BA355A1ED80B4A003A50EF /* LabelSectionHeaderView.m */,
+				45BA355B1ED80B4A003A50EF /* LabelSectionHeaderView.h */,
+				45BA355C1ED80B4A003A50EF /* LabelSectionHeaderView.xib */,
+				45BA35581ED80A90003A50EF /* LabelFieldCell.h */,
+				45BA35571ED80A90003A50EF /* LabelFieldCell.m */,
+				45BA35561ED80A71003A50EF /* KindCellItem.h */,
+				45BA35541ED80A30003A50EF /* KindCellItem.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		45F5720E1EBC5CAD0042BDEA = {
@@ -263,6 +278,7 @@
 		45F572191EBC5CAD0042BDEA /* JobAdmin-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				45BA35521ED80A24003A50EF /* View */,
 				45F572311EBC5D1C0042BDEA /* JobEditViewController */,
 				45F572321EBC5D1C0042BDEA /* RootViewController */,
 				45F5721D1EBC5CAD0042BDEA /* AppDelegate.h */,
@@ -288,15 +304,6 @@
 		45F572311EBC5D1C0042BDEA /* JobEditViewController */ = {
 			isa = PBXGroup;
 			children = (
-				456AF0BE1EC5916C003410D6 /* LabelXibSectionItem.h */,
-				456AF0C21EC5916C003410D6 /* LabelXibSectionItem.m */,
-				456AF0BF1EC5916C003410D6 /* LabelFieldXibCellItem.h */,
-				456AF0C11EC5916C003410D6 /* LabelFieldXibCellItem.m */,
-				456AF0C41EC5916C003410D6 /* LabelFieldCell.h */,
-				456AF0C01EC5916C003410D6 /* LabelFieldCell.m */,
-				456AF0C51EC5916C003410D6 /* LabelSectionHeaderView.h */,
-				456AF0C31EC5916C003410D6 /* LabelSectionHeaderView.m */,
-				456AF0C61EC5916C003410D6 /* LabelSectionHeaderView.xib */,
 				45F572391EBC5D430042BDEA /* JobEdit.storyboard */,
 				45F572361EBC5D2B0042BDEA /* JobEditViewController.h */,
 				45F572371EBC5D2B0042BDEA /* JobEditViewController.m */,
@@ -396,6 +403,7 @@
 		45F572531EBC5E530042BDEA /* Universe */ = {
 			isa = PBXGroup;
 			children = (
+				45BA354A1ED7FE63003A50EF /* EditItem */,
 				456AF0B71EC587BC003410D6 /* CellItem */,
 				45155C401EC0520F008C04FC /* GroupItem */,
 				45F572541EBC5E530042BDEA /* AFNetworking */,
@@ -605,8 +613,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				456AF0CB1EC5916C003410D6 /* LabelSectionHeaderView.xib in Resources */,
 				45F5722A1EBC5CAD0042BDEA /* LaunchScreen.storyboard in Resources */,
+				45BA355E1ED80B4A003A50EF /* LabelSectionHeaderView.xib in Resources */,
 				45F572271EBC5CAD0042BDEA /* Assets.xcassets in Resources */,
 				45F5723A1EBC5D430042BDEA /* JobEdit.storyboard in Resources */,
 				45F572251EBC5CAD0042BDEA /* Main.storyboard in Resources */,
@@ -634,38 +642,36 @@
 				45F572BD1EBC5E530042BDEA /* ViewHelper.m in Sources */,
 				45F572AD1EBC5E530042BDEA /* UIAlertView+AFNetworking.m in Sources */,
 				45F572AB1EBC5E530042BDEA /* AFNetworkActivityIndicatorManager.m in Sources */,
-				456AF0CA1EC5916C003410D6 /* LabelSectionHeaderView.m in Sources */,
+				45BA35591ED80A90003A50EF /* LabelFieldCell.m in Sources */,
 				45F572A31EBC5E530042BDEA /* AFHTTPRequestOperationManager.m in Sources */,
 				45F572AE1EBC5E530042BDEA /* UIButton+AFNetworking.m in Sources */,
 				45F572AC1EBC5E530042BDEA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				456AF0BD1EC58F62003410D6 /* KindCellItem.m in Sources */,
 				45F572A11EBC5E530042BDEA /* ELApp.m in Sources */,
 				45F572C71EBC666D0042BDEA /* AdminJob.m in Sources */,
 				456AF0BA1EC587BC003410D6 /* CellItem.m in Sources */,
 				45F572B21EBC5E530042BDEA /* UIWebView+AFNetworking.m in Sources */,
 				45F572BC1EBC5E530042BDEA /* StringHelper.m in Sources */,
 				45F572B51EBC5E530042BDEA /* NSError+MC.m in Sources */,
-				456AF0C91EC5916C003410D6 /* LabelXibSectionItem.m in Sources */,
 				45F5721F1EBC5CAD0042BDEA /* AppDelegate.m in Sources */,
 				45F572C31EBC61440042BDEA /* JobAddRequest.m in Sources */,
 				45F5729D1EBC5E530042BDEA /* MORequestFactory.m in Sources */,
 				45F572BE1EBC5E530042BDEA /* MBProgressHUD.m in Sources */,
 				45F572AA1EBC5E530042BDEA /* AFURLSessionManager.m in Sources */,
+				45BA355D1ED80B4A003A50EF /* LabelSectionHeaderView.m in Sources */,
 				45F572A91EBC5E530042BDEA /* AFURLResponseSerialization.m in Sources */,
 				45F572381EBC5D2B0042BDEA /* JobEditViewController.m in Sources */,
-				456AF0C81EC5916C003410D6 /* LabelFieldXibCellItem.m in Sources */,
 				45F5721C1EBC5CAD0042BDEA /* main.m in Sources */,
 				45F572A81EBC5E530042BDEA /* AFURLRequestSerialization.m in Sources */,
 				45F572B91EBC5E530042BDEA /* DateHelper.m in Sources */,
 				45F572B11EBC5E530042BDEA /* UIRefreshControl+AFNetworking.m in Sources */,
 				45F572BF1EBC5E530042BDEA /* UIView+Extension.m in Sources */,
-				45C905CB1EC1AB4D00DEEDD4 /* JobEditItem.m in Sources */,
 				45F572B31EBC5E530042BDEA /* Callback.m in Sources */,
 				45F572B81EBC5E530042BDEA /* ColorHelper.m in Sources */,
+				45BA35511ED8050F003A50EF /* JobEditItem.m in Sources */,
 				45F572AF1EBC5E530042BDEA /* UIImageView+AFNetworking.m in Sources */,
-				456AF0C71EC5916C003410D6 /* LabelFieldCell.m in Sources */,
 				45F572A51EBC5E530042BDEA /* AFNetworkReachabilityManager.m in Sources */,
 				45F572B61EBC5E530042BDEA /* ArrayHelper.m in Sources */,
+				45BA35551ED80A30003A50EF /* KindCellItem.m in Sources */,
 				45F5723D1EBC5D650042BDEA /* JobEditListViewController.m in Sources */,
 				45F572A21EBC5E530042BDEA /* AFHTTPRequestOperation.m in Sources */,
 				45F572B41EBC5E530042BDEA /* MCProtocolCommand.m in Sources */,

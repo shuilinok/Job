@@ -8,11 +8,8 @@
 
 #import "CellItem.h"
 
-@interface CellItem ()
-
-@property (strong, nonatomic) id<GroupItem> groupItem;
-
-@end
+#define kCellItemAssignCellNotification     @"CellItemAssignCellNotification"
+#define kCell                               @"Cell"
 
 @implementation CellItem
 
@@ -21,22 +18,33 @@
     self = [super init];
     if(self)
     {
-        GroupItem *groupItem = [[GroupItem alloc] init];
-        
-        self.groupItem = groupItem;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(assignCellNotification:) name:kCellItemAssignCellNotification object:nil];
     }
     
     return self;
 }
 
-- (id)forwardingTargetForSelector:(SEL)aSelector
+- (void)dealloc
 {
-    if([self.groupItem respondsToSelector:aSelector])
-    {
-        return self.groupItem;
-    }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kCellItemAssignCellNotification object:nil];
+}
+
+- (void)setCell:(UITableViewCell *)cell
+{
+    _cell = cell;
     
-    return nil;
+    if(cell)
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCellItemAssignCellNotification object:self userInfo:@{kCell:cell}];
+    }
+}
+
+- (void)assignCellNotification:(NSNotification *)notification
+{
+    if(notification.object != self && [notification.userInfo objectForKey:kCell] == self.cell)//别的cellitem对象关联了这个cell
+    {
+        self.cell = nil;
+    }
 }
 
 - (UITableViewCell *)buildCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView
@@ -48,14 +56,6 @@
 @end
 
 
-
-@interface SectionItem ()
-
-@property (strong, nonatomic) id<GroupItem> groupItem;
-
-@end
-
-
 @implementation SectionItem
 
 - (instancetype)init
@@ -63,22 +63,10 @@
     self = [super init];
     if(self)
     {
-        GroupItem *groupItem = [[GroupItem alloc] init];
         
-        self.groupItem = groupItem;
     }
     
     return self;
-}
-
-- (id)forwardingTargetForSelector:(SEL)aSelector
-{
-    if([self.groupItem respondsToSelector:aSelector])
-    {
-        return self.groupItem;
-    }
-    
-    return nil;
 }
 
 - (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView

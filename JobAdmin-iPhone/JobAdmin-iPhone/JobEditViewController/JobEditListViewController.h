@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JobEditItem.h"
+#import "KindCellItem.h"
 
 @interface JobEditListViewController : UITableViewController
 
