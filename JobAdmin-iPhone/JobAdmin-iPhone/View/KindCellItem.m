@@ -9,7 +9,6 @@
 #import "KindCellItem.h"
 
 @interface LabelFieldCellItem ()
-@property (strong, nonatomic) id<GroupItem> groupItem;
 @end
 
 @implementation LabelFieldCellItem
@@ -20,24 +19,10 @@
     self = [super init];
     if(self)
     {
-        GroupItem *groupItem = [[GroupItem alloc] init];
-        
-        self.groupItem = groupItem;
-        
         self.height = 50;
     }
     
     return self;
-}
-
-- (id)forwardingTargetForSelector:(SEL)aSelector
-{
-    if([self.groupItem respondsToSelector:aSelector])
-    {
-        return self.groupItem;
-    }
-    
-    return nil;
 }
 
 - (UITableViewCell *)buildCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView
@@ -65,11 +50,10 @@
 
 
 @interface LabelSectionItem ()
-@property (strong, nonatomic) id<GroupItem> groupItem;
+
 @end
 
 @implementation LabelSectionItem
-
 @dynamic headerView;
 
 - (instancetype)init
@@ -77,24 +61,10 @@
     self = [super init];
     if(self)
     {
-        GroupItem *groupItem = [[GroupItem alloc] init];
-        
-        self.groupItem = groupItem;
-        
         self.headerHeight = 40;
     }
     
     return self;
-}
-
-- (id)forwardingTargetForSelector:(SEL)aSelector
-{
-    if([self.groupItem respondsToSelector:aSelector])
-    {
-        return self.groupItem;
-    }
-    
-    return nil;
 }
 
 - (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView

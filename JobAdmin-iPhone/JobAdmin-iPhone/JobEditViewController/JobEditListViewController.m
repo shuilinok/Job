@@ -48,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    id<SectionItem, GroupItem> sectionItem = (id<SectionItem, GroupItem>)[self.totalItem itemAtIndex:section];
+    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
     return [sectionItem itemCount];
 }
@@ -59,8 +59,8 @@
     NSInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
     
-    id<SectionItem, GroupItem> sectionItem = (id<SectionItem, GroupItem>)[self.totalItem itemAtIndex:section];
-    CellItem *cellItem = [sectionItem itemAtIndex:row];
+    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    GroupCellItem *cellItem = [sectionItem itemAtIndex:row];
     
     UITableViewCell *cell = [cellItem buildCellAtIndexPath:indexPath tableView:tableView];
     
@@ -70,7 +70,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    id<SectionItem, GroupItem> sectionItem = (id<SectionItem, GroupItem>)[self.totalItem itemAtIndex:section];
+    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
     UIView *headerView = [sectionItem buildHeaderAtSection:section tableView:tableView];
     
@@ -82,15 +82,15 @@
     NSInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
     
-    id<SectionItem, GroupItem> sectionItem = (id<SectionItem, GroupItem>)[self.totalItem itemAtIndex:section];
-    CellItem *cellItem = [sectionItem itemAtIndex:row];
+    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    GroupCellItem *cellItem = [sectionItem itemAtIndex:row];
     
     return cellItem.height;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    id<SectionItem, GroupItem> sectionItem = (id<SectionItem, GroupItem>)[self.totalItem itemAtIndex:section];
+    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
     return sectionItem.headerHeight;
 }

@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CellItem.h"
-#import "EditItem.h"
-#import "GroupItem.h"
+#import "GroupCellItem.h"
 #import "LabelFieldCell.h"
 #import "LabelSectionHeaderView.h"
 
-@interface LabelFieldCellItem : CellItem <LabelFieldEditItem, GroupItem>
+@interface LabelFieldCellItem : GroupCellItem
 
 @property (weak, nonatomic) LabelFieldCell *cell;
 
@@ -24,7 +22,7 @@
 @end
 
 
-@interface LabelSectionItem : SectionItem <LabelEditItem, GroupItem>
+@interface LabelSectionItem : GroupSectionItem
 
 @property (weak, nonatomic) LabelSectionHeaderView *headerView;
 

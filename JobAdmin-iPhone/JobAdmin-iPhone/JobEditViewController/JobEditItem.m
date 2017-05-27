@@ -36,14 +36,14 @@
     return nil;
 }
 
-- (void)setBasicItem:(id<LabelEditItem,GroupItem>)basicItem
+- (void)setBasicItem:(LabelSectionItem *)basicItem
 {
     [self.groupItem addItem:basicItem elseRemoveItem:_basicItem];
     
     _basicItem = basicItem;
 }
 
-- (void)setContentItem:(id<LabelEditItem,GroupItem>)contentItem
+- (void)setContentItem:(LabelSectionItem *)contentItem
 {
     [self.groupItem addItem:contentItem elseRemoveItem:_contentItem];
     
@@ -51,27 +51,33 @@
 }
 
 
-- (void)setPositionItem:(id<LabelFieldEditItem,GroupItem>)positionItem
+- (void)setPositionItem:(LabelFieldCellItem *)positionItem
 {
     [self.basicItem addItem:positionItem elseRemoveItem:_positionItem];
     
     _positionItem = positionItem;
 }
 
-- (void)setCityItem:(id<LabelFieldEditItem,GroupItem>)cityItem
+- (void)setCityItem:(LabelFieldCellItem *)cityItem
 {
     [self.basicItem addItem:cityItem elseRemoveItem:_cityItem];
     
     _cityItem = cityItem;
 }
 
-- (void)setCompanyItem:(id<LabelFieldEditItem,GroupItem>)companyItem
+- (void)setCompanyItem:(LabelFieldCellItem *)companyItem
 {
     [self.contentItem addItem:companyItem elseRemoveItem:_companyItem];
     
     _companyItem = companyItem;
 }
 
+- (void)setAddressItem:(LabelFieldCellItem *)addressItem
+{
+    [self.contentItem addItem:addressItem elseRemoveItem:_addressItem];
+    
+    _addressItem = addressItem;
+}
 @end
 
 

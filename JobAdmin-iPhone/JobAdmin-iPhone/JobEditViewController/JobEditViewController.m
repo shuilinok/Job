@@ -10,7 +10,6 @@
 #import "JobEditListViewController.h"
 #import "JobEditItem.h"
 #import "AdminJob.h"
-#import "KindCellItem.h"
 #import "BarTextButtonItem.h"
 
 @interface JobEditViewController ()
@@ -122,6 +121,17 @@
     return item;
 }
 
+- (LabelFieldCellItem *)createAddressItem
+{
+    LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.name = @"地址:";
+    item.contentTip = @"请输入公司详细地址";
+    item.cellIdentifier = @"LabelFieldCell";
+    
+    
+    return item;
+}
+
 - (JobEditItem *)createJobEditItem
 {
     JobEditItem *totalItem = [[JobEditItem alloc] init];
@@ -140,6 +150,9 @@
     
     LabelFieldCellItem *companyItem = [self createCompanyItem];
     totalItem.companyItem = companyItem;
+    
+    LabelFieldCellItem *addressItem = [self createAddressItem];
+    totalItem.addressItem = addressItem;
     
     return totalItem;
 }

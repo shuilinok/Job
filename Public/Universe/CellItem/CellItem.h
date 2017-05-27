@@ -25,18 +25,8 @@
 @end
 
 
-@protocol SectionItem <NSObject>
 
-@property (assign, nonatomic) CGFloat headerHeight;
-
-@property (weak, nonatomic) UIView *headerView;
-
-- (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView;
-
-@end
-
-
-@interface SectionItem : NSObject <SectionItem>
+@interface SectionItem : NSObject
 
 @property (assign, nonatomic) CGFloat headerHeight;
 
