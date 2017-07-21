@@ -8,7 +8,7 @@
 
 #import "AdminJob.h"
 
-@implementation AdminJob
+@implementation AdminJobNormalAddPolicy
 
 - (void)add:(ResultCallback)callback
 {
@@ -19,9 +19,26 @@
     addRequest.company = self.company;
     
     [addRequest send:^(id data, NSError *error) {
-       
+        
+        if(error.code == noErr)
+        {
+            self.job.title = self.title;
+            self.job.city = self.city;
+        }
+        
         callback(error);
     }];
 }
 
+@end
+
+
+@implementation AdminJob
+
+- (void)setAddPolicy:(id<AdminJobAddPolicy>)addPolicy
+{
+    _addPolicy = addPolicy;
+    
+    addPolicy.job = self;
+}
 @end

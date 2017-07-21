@@ -169,15 +169,20 @@
         return nil;
     }
     
+    AdminJobNormalAddPolicy *policy = [[AdminJobNormalAddPolicy alloc] init];
+    policy.title = title;
+    policy.city = city;
+    policy.company = company;
+    
     AdminJob *job = [[AdminJob alloc] init];
-
-    job.title = title;
-    job.city = city;
-    job.company = company;
-
-    [job add:^(NSError *error) {
+    job.addPolicy = policy;
+    
+    [job.addPolicy add:^(NSError *error) {
         
     }];
+    
+    //    NSString *key = [NSString stringWithFormat:@"%llx",(long long)job];
+    //    NSLog(@"key = %@",key);
     
     return nil;
 }

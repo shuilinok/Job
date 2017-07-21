@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "BarTextButtonItem.h"
+#import "JobViewController.h"
 #import "JobEditViewController.h"
 
 @interface ViewController ()
@@ -19,7 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    JobEditViewController *jobController = [JobEditViewController instance];
+    JobViewController *jobController = [JobViewController instance];
+    jobController.addCommand = [MCProtocolCommand command:self selector:@selector(jobToAdd:)];//从列表页面跳转到增加页面
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:jobController];
     
@@ -35,5 +38,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UINavigationController *)currentNavigationController
+{
+    return (UINavigationController *)self.contentController;
+}
+
+- (id)jobToAdd:(BarTextButtonItem *)item
+{
+    JobEditViewController *controller = [JobEditViewController instance];
+    
+    [[self currentNavigationController] pushViewController:controller animated:YES];
+    
+    return nil;
+}
 
 @end

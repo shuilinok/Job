@@ -12,6 +12,11 @@
 		456AF0D21EC597ED003410D6 /* BarTextButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0D11EC597ED003410D6 /* BarTextButtonItem.m */; };
 		45804D0C1ED91A0900A08B56 /* GroupCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45804D0B1ED91A0900A08B56 /* GroupCellItem.m */; };
 		45804D0F1ED91E8300A08B56 /* JobEditItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45804D0E1ED91E8300A08B56 /* JobEditItem.m */; };
+		459015781EDE654A0080749F /* JobListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459015771EDE654A0080749F /* JobListViewController.m */; };
+		4590157B1EDE656C0080749F /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4590157A1EDE656C0080749F /* JobViewController.m */; };
+		4590157D1EDE65780080749F /* Job.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4590157C1EDE65780080749F /* Job.storyboard */; };
+		459015801EDE65CE0080749F /* JobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4590157F1EDE65CE0080749F /* JobCell.m */; };
+		459015871EDE99590080749F /* AdminJobList.m in Sources */ = {isa = PBXBuildFile; fileRef = 459015861EDE99590080749F /* AdminJobList.m */; };
 		45BA35551ED80A30003A50EF /* KindCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA35541ED80A30003A50EF /* KindCellItem.m */; };
 		45BA35591ED80A90003A50EF /* LabelFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA35571ED80A90003A50EF /* LabelFieldCell.m */; };
 		45BA355D1ED80B4A003A50EF /* LabelSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BA355A1ED80B4A003A50EF /* LabelSectionHeaderView.m */; };
@@ -74,6 +79,15 @@
 		45804D0B1ED91A0900A08B56 /* GroupCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCellItem.m; sourceTree = "<group>"; };
 		45804D0D1ED91E8300A08B56 /* JobEditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobEditItem.h; sourceTree = "<group>"; };
 		45804D0E1ED91E8300A08B56 /* JobEditItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobEditItem.m; sourceTree = "<group>"; };
+		459015761EDE654A0080749F /* JobListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobListViewController.h; sourceTree = "<group>"; };
+		459015771EDE654A0080749F /* JobListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobListViewController.m; sourceTree = "<group>"; };
+		459015791EDE656C0080749F /* JobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobViewController.h; sourceTree = "<group>"; };
+		4590157A1EDE656C0080749F /* JobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobViewController.m; sourceTree = "<group>"; };
+		4590157C1EDE65780080749F /* Job.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Job.storyboard; sourceTree = "<group>"; };
+		4590157E1EDE65CE0080749F /* JobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobCell.h; sourceTree = "<group>"; };
+		4590157F1EDE65CE0080749F /* JobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobCell.m; sourceTree = "<group>"; };
+		459015851EDE99590080749F /* AdminJobList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminJobList.h; sourceTree = "<group>"; };
+		459015861EDE99590080749F /* AdminJobList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminJobList.m; sourceTree = "<group>"; };
 		45BA35541ED80A30003A50EF /* KindCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KindCellItem.m; sourceTree = "<group>"; };
 		45BA35561ED80A71003A50EF /* KindCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KindCellItem.h; sourceTree = "<group>"; };
 		45BA35571ED80A90003A50EF /* LabelFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFieldCell.m; sourceTree = "<group>"; };
@@ -230,6 +244,20 @@
 			path = BarButton;
 			sourceTree = "<group>";
 		};
+		459015751EDE65390080749F /* JobViewController */ = {
+			isa = PBXGroup;
+			children = (
+				459015761EDE654A0080749F /* JobListViewController.h */,
+				459015771EDE654A0080749F /* JobListViewController.m */,
+				459015791EDE656C0080749F /* JobViewController.h */,
+				4590157A1EDE656C0080749F /* JobViewController.m */,
+				4590157C1EDE65780080749F /* Job.storyboard */,
+				4590157E1EDE65CE0080749F /* JobCell.h */,
+				4590157F1EDE65CE0080749F /* JobCell.m */,
+			);
+			path = JobViewController;
+			sourceTree = "<group>";
+		};
 		45BA35521ED80A24003A50EF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +292,7 @@
 		45F572191EBC5CAD0042BDEA /* JobAdmin-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				459015751EDE65390080749F /* JobViewController */,
 				45BA35521ED80A24003A50EF /* View */,
 				45F572311EBC5D1C0042BDEA /* JobEditViewController */,
 				45F572321EBC5D1C0042BDEA /* RootViewController */,
@@ -538,6 +567,8 @@
 			children = (
 				45F572C51EBC666D0042BDEA /* AdminJob.h */,
 				45F572C61EBC666D0042BDEA /* AdminJob.m */,
+				459015851EDE99590080749F /* AdminJobList.h */,
+				459015861EDE99590080749F /* AdminJobList.m */,
 			);
 			path = AdminJob;
 			sourceTree = "<group>";
@@ -600,6 +631,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4590157D1EDE65780080749F /* Job.storyboard in Resources */,
 				45F5722A1EBC5CAD0042BDEA /* LaunchScreen.storyboard in Resources */,
 				45BA355E1ED80B4A003A50EF /* LabelSectionHeaderView.xib in Resources */,
 				45F572271EBC5CAD0042BDEA /* Assets.xcassets in Resources */,
@@ -618,16 +650,20 @@
 				45155C431EC05224008C04FC /* GroupItem.m in Sources */,
 				45F572A71EBC5E530042BDEA /* AFURLConnectionOperation.m in Sources */,
 				45F572BA1EBC5E530042BDEA /* DictionaryHelper.m in Sources */,
+				459015801EDE65CE0080749F /* JobCell.m in Sources */,
 				45F5729F1EBC5E530042BDEA /* HttpRequestFactory.m in Sources */,
 				456AF0D21EC597ED003410D6 /* BarTextButtonItem.m in Sources */,
 				45F572BB1EBC5E530042BDEA /* ObjectHandler.m in Sources */,
 				45F572A61EBC5E530042BDEA /* AFSecurityPolicy.m in Sources */,
 				45F572351EBC5D1C0042BDEA /* ViewController.m in Sources */,
+				459015781EDE654A0080749F /* JobListViewController.m in Sources */,
 				45F572C01EBC5E530042BDEA /* UNStack.m in Sources */,
+				459015871EDE99590080749F /* AdminJobList.m in Sources */,
 				45F572B01EBC5E530042BDEA /* UIProgressView+AFNetworking.m in Sources */,
 				45F572B71EBC5E530042BDEA /* CharHelper.m in Sources */,
 				45F572BD1EBC5E530042BDEA /* ViewHelper.m in Sources */,
 				45F572AD1EBC5E530042BDEA /* UIAlertView+AFNetworking.m in Sources */,
+				4590157B1EDE656C0080749F /* JobViewController.m in Sources */,
 				45F572AB1EBC5E530042BDEA /* AFNetworkActivityIndicatorManager.m in Sources */,
 				45BA35591ED80A90003A50EF /* LabelFieldCell.m in Sources */,
 				45F572A31EBC5E530042BDEA /* AFHTTPRequestOperationManager.m in Sources */,
