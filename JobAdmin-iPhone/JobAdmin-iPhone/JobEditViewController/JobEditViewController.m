@@ -95,7 +95,6 @@
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"title:";
     item.contentTip = @"请输入title";
-    item.cellIdentifier = @"LabelFieldCell";
     
     return item;
 }
@@ -105,7 +104,6 @@
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"城市:";
     item.contentTip = @"请输入城市";
-    item.cellIdentifier = @"LabelFieldCell";
     
     return item;
 }
@@ -115,8 +113,6 @@
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"公司:";
     item.contentTip = @"请输入公司名称";
-    item.cellIdentifier = @"LabelFieldCell";
-    
     
     return item;
 }
@@ -126,8 +122,6 @@
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
     item.name = @"地址:";
     item.contentTip = @"请输入公司详细地址";
-    item.cellIdentifier = @"LabelFieldCell";
-    
     
     return item;
 }

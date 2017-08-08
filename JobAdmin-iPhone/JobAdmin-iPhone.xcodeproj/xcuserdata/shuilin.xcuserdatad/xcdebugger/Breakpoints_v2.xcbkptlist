@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JobAdmin-iPhone/JobEditViewController/JobEditListViewController.m"
-            timestampString = "516177950.406591"
+            timestampString = "523879597.28074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
-            timestampString = "517546056.278792"
+            timestampString = "523879597.28074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "-rightBarButtonClicked:"
             landmarkType = "7">
          </BreakpointContent>
@@ -84,27 +84,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
-            timestampString = "517546056.278792"
+            timestampString = "523879597.28074"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-rightBarButtonClicked:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
+            timestampString = "523879597.28074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "166"
             endingLineNumber = "166"
-            landmarkName = "-rightBarButtonClicked:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
-            timestampString = "517916550.056993"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
             landmarkName = "-rightBarButtonClicked:"
             landmarkType = "7">
          </BreakpointContent>
@@ -123,6 +123,54 @@
             endingLineNumber = "27"
             landmarkName = "-send:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
+            timestampString = "523879589.86124"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-rightBarButtonClicked:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JobEditViewController rightBarButtonClicked:]"
+                  moduleName = "JobAdmin-iPhone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuetang/Desktop/GOF/Job/JobAdmin-iPhone/JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
+                  timestampString = "523879598.306967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "685">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[JobEditViewController rightBarButtonClicked:]_block_invoke"
+                  moduleName = "JobAdmin-iPhone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xuetang/Desktop/GOF/Job/JobAdmin-iPhone/JobAdmin-iPhone/JobEditViewController/JobEditViewController.m"
+                  timestampString = "523879598.309015"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

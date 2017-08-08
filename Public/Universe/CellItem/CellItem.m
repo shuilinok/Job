@@ -47,11 +47,6 @@
     }
 }
 
-- (UITableViewCell *)buildCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView
-{
-    abort();
-    return nil;
-}
 
 @end
 
@@ -67,12 +62,6 @@
     }
     
     return self;
-}
-
-- (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView
-{
-    abort();
-    return nil;
 }
 
 @end

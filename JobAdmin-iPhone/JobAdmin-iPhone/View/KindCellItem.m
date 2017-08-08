@@ -25,17 +25,15 @@
     return self;
 }
 
-- (UITableViewCell *)buildCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView
+- (void)setCell:(LabelFieldCell *)cell
 {
-    LabelFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
-    self.cell = cell;
+    [super setCell:cell];
     
     cell.fieldTextChangedCommand = [MCProtocolCommand command:self selector:@selector(fieldTextChanged:)];
     cell.nameLabel.text = self.name;
     cell.contentField.placeholder = self.contentTip;
     cell.contentField.text = self.content;
     
-    return cell;
 }
 
 - (id)fieldTextChanged:(NSString *)text
@@ -67,13 +65,10 @@
     return self;
 }
 
-- (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView
+- (void)setHeaderView:(LabelSectionHeaderView *)headerView
 {
-    LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:@"LabelSectionHeaderView" owner:nil options:nil] lastObject];
-    self.headerView = v;
-    
-    v.label.text = self.title;
-    
-    return v;
+    [super setHeaderView:headerView];
+
+    headerView.label.text = self.title;
 }
 @end

@@ -12,15 +12,12 @@
 
 @interface CellItem : NSObject
 
-@property (strong, nonatomic) NSString *cellIdentifier;
-
 @property (assign, nonatomic) CGFloat height;
 
 @property (assign, nonatomic) BOOL hidden;
 
 @property (weak, nonatomic) UITableViewCell *cell;
 
-- (UITableViewCell *)buildCellAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
 
 @end
 
@@ -31,8 +28,6 @@
 @property (assign, nonatomic) CGFloat headerHeight;
 
 @property (weak, nonatomic) UIView *headerView;
-
-- (UIView *)buildHeaderAtSection:(NSUInteger)section tableView:(UITableView *)tableView;
 
 @end
 

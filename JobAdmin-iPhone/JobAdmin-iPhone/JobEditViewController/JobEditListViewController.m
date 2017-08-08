@@ -61,10 +61,17 @@
     
     GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     GroupCellItem *cellItem = [sectionItem itemAtIndex:row];
+    if([cellItem isKindOfClass:[LabelFieldCellItem class]])
+    {
+        LabelFieldCellItem *item = (LabelFieldCellItem *)cellItem;
+        
+        LabelFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelFieldCell" forIndexPath:indexPath];
+        item.cell = cell;
+        
+        return cell;
+    }
     
-    UITableViewCell *cell = [cellItem buildCellAtIndexPath:indexPath tableView:tableView];
-    
-    return cell;
+    return nil;
     
 }
 
@@ -72,9 +79,16 @@
 {
     GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
-    UIView *headerView = [sectionItem buildHeaderAtSection:section tableView:tableView];
+    if([sectionItem isKindOfClass:[LabelSectionItem class]])
+    {
+        LabelSectionItem *item  = (LabelSectionItem *)sectionItem;
+        LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:@"LabelSectionHeaderView" owner:nil options:nil] lastObject];
+        item.headerView = v;
+        
+        return v;
+    }
     
-    return headerView;
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
