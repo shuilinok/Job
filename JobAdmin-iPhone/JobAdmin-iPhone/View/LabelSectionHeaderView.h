@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 //纯文本
 @interface LabelSectionHeaderView : UIView
 

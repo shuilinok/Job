@@ -6,28 +6,28 @@
 //  Copyright © 2017 enjoyloop. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GroupItem.h"
 
-
-@interface CellItem : NSObject
+@interface CellItem : NSObject <GroupItem>
 
 @property (assign, nonatomic) CGFloat height;
 
-@property (assign, nonatomic) BOOL hidden;
-
-@property (weak, nonatomic) UITableViewCell *cell;
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 
 
-@interface SectionItem : NSObject
+@interface SectionItem : NSObject <GroupItem>
 
 @property (assign, nonatomic) CGFloat headerHeight;
 
-@property (weak, nonatomic) UIView *headerView;
+@property (assign, nonatomic) CGFloat footerHeight;
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
 
 @end
 

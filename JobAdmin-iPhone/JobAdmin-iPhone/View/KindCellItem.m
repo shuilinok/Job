@@ -7,59 +7,51 @@
 //
 
 #import "KindCellItem.h"
+#import "LabelFieldCell.h"
+#import "LabelSectionHeaderView.h"
 
 @interface LabelFieldCellItem ()
 @end
 
 @implementation LabelFieldCellItem
-@dynamic cell;
 
 - (instancetype)init
 {
     self = [super init];
     if(self)
     {
-        self.height = 50;
+        
     }
     
     return self;
 }
 
-- (void)setCell:(LabelFieldCell *)cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super setCell:cell];
+    LabelFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:self.identifier forIndexPath:indexPath];
     
-    cell.fieldTextChangedCommand = [MCProtocolCommand command:self selector:@selector(fieldTextChanged:)];
-    cell.nameLabel.text = self.name;
-    cell.contentField.placeholder = self.contentTip;
-    cell.contentField.text = self.content;
+    cell.item = self;
     
+    return cell;
 }
-
-- (id)fieldTextChanged:(NSString *)text
-{
-    self.content = text;
-    
-    return nil;
-}
-
 
 @end
 
 
 @interface LabelSectionItem ()
 
+@property (weak, nonatomic) LabelSectionHeaderView *headerView;
+
 @end
 
 @implementation LabelSectionItem
-@dynamic headerView;
 
 - (instancetype)init
 {
     self = [super init];
     if(self)
     {
-        self.headerHeight = 40;
+        
     }
     
     return self;
@@ -67,8 +59,21 @@
 
 - (void)setHeaderView:(LabelSectionHeaderView *)headerView
 {
-    [super setHeaderView:headerView];
+    _headerView = headerView;
+    
+    _headerView.label.text = self.header;
+}
 
-    headerView.label.text = self.title;
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:self.headerNibName owner:nil options:nil] lastObject];
+    self.headerView = v;
+    
+    return v;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return nil;
 }
 @end

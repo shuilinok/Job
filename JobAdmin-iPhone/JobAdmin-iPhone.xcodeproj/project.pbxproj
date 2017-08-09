@@ -10,7 +10,6 @@
 		45155C431EC05224008C04FC /* GroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45155C421EC05224008C04FC /* GroupItem.m */; };
 		456AF0BA1EC587BC003410D6 /* CellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0B91EC587BC003410D6 /* CellItem.m */; };
 		456AF0D21EC597ED003410D6 /* BarTextButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 456AF0D11EC597ED003410D6 /* BarTextButtonItem.m */; };
-		45804D0C1ED91A0900A08B56 /* GroupCellItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45804D0B1ED91A0900A08B56 /* GroupCellItem.m */; };
 		45804D0F1ED91E8300A08B56 /* JobEditItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 45804D0E1ED91E8300A08B56 /* JobEditItem.m */; };
 		459015781EDE654A0080749F /* JobListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459015771EDE654A0080749F /* JobListViewController.m */; };
 		4590157B1EDE656C0080749F /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4590157A1EDE656C0080749F /* JobViewController.m */; };
@@ -75,8 +74,6 @@
 		456AF0B91EC587BC003410D6 /* CellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellItem.m; sourceTree = "<group>"; };
 		456AF0D01EC597ED003410D6 /* BarTextButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarTextButtonItem.h; sourceTree = "<group>"; };
 		456AF0D11EC597ED003410D6 /* BarTextButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarTextButtonItem.m; sourceTree = "<group>"; };
-		45804D0A1ED91A0900A08B56 /* GroupCellItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCellItem.h; sourceTree = "<group>"; };
-		45804D0B1ED91A0900A08B56 /* GroupCellItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCellItem.m; sourceTree = "<group>"; };
 		45804D0D1ED91E8300A08B56 /* JobEditItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobEditItem.h; sourceTree = "<group>"; };
 		45804D0E1ED91E8300A08B56 /* JobEditItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobEditItem.m; sourceTree = "<group>"; };
 		459015761EDE654A0080749F /* JobListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobListViewController.h; sourceTree = "<group>"; };
@@ -229,8 +226,6 @@
 			children = (
 				456AF0B81EC587BC003410D6 /* CellItem.h */,
 				456AF0B91EC587BC003410D6 /* CellItem.m */,
-				45804D0A1ED91A0900A08B56 /* GroupCellItem.h */,
-				45804D0B1ED91A0900A08B56 /* GroupCellItem.m */,
 			);
 			path = CellItem;
 			sourceTree = "<group>";
@@ -261,8 +256,8 @@
 		45BA35521ED80A24003A50EF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45BA355A1ED80B4A003A50EF /* LabelSectionHeaderView.m */,
 				45BA355B1ED80B4A003A50EF /* LabelSectionHeaderView.h */,
+				45BA355A1ED80B4A003A50EF /* LabelSectionHeaderView.m */,
 				45BA355C1ED80B4A003A50EF /* LabelSectionHeaderView.xib */,
 				45BA35581ED80A90003A50EF /* LabelFieldCell.h */,
 				45BA35571ED80A90003A50EF /* LabelFieldCell.m */,
@@ -668,7 +663,6 @@
 				45BA35591ED80A90003A50EF /* LabelFieldCell.m in Sources */,
 				45F572A31EBC5E530042BDEA /* AFHTTPRequestOperationManager.m in Sources */,
 				45F572AE1EBC5E530042BDEA /* UIButton+AFNetworking.m in Sources */,
-				45804D0C1ED91A0900A08B56 /* GroupCellItem.m in Sources */,
 				45F572AC1EBC5E530042BDEA /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				45F572A11EBC5E530042BDEA /* ELApp.m in Sources */,
 				45804D0F1ED91E8300A08B56 /* JobEditItem.m in Sources */,

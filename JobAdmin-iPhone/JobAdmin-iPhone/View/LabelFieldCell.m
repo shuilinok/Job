@@ -32,7 +32,16 @@
 
 - (void)textFieldDidChange:(id)sender
 {
-    [self.fieldTextChangedCommand execute:1,self.contentField.text];
+    self.item.content = self.contentField.text;
+}
+
+- (void)setItem:(LabelFieldCellItem *)item
+{
+    _item = item;
+    
+    self.nameLabel.text = item.name;
+    self.contentField.text = item.content;
+    self.contentField.placeholder = item.contentTip;
 }
 
 @end

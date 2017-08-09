@@ -77,15 +77,19 @@
 - (LabelSectionItem *)createBasicItem
 {
     LabelSectionItem *item = [[LabelSectionItem alloc] init];
-    item.title = @"基本信息";
-    
+    item.headerNibName = @"LabelSectionHeaderView";
+    item.headerHeight = 40;
+    item.header = @"基本信息";
+
     return item;
 }
 
 - (LabelSectionItem *)createContentItem
 {
     LabelSectionItem *item = [[LabelSectionItem alloc] init];
-    item.title = @"具体信息";
+    item.headerNibName = @"LabelSectionHeaderView";
+    item.headerHeight = 40;
+    item.header = @"具体信息";
     
     return item;
 }
@@ -93,6 +97,8 @@
 - (LabelFieldCellItem *)createPositionItem
 {
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.identifier = @"LabelFieldCell";
+    item.height = 50;
     item.name = @"title:";
     item.contentTip = @"请输入title";
     
@@ -102,6 +108,8 @@
 - (LabelFieldCellItem *)createCityItem
 {
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.identifier = @"LabelFieldCell";
+    item.height = 50;
     item.name = @"城市:";
     item.contentTip = @"请输入城市";
     
@@ -111,6 +119,8 @@
 - (LabelFieldCellItem *)createCompanyItem
 {
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.identifier = @"LabelFieldCell";
+    item.height = 50;
     item.name = @"公司:";
     item.contentTip = @"请输入公司名称";
     
@@ -120,6 +130,8 @@
 - (LabelFieldCellItem *)createAddressItem
 {
     LabelFieldCellItem *item = [[LabelFieldCellItem alloc] init];
+    item.identifier = @"LabelFieldCell";
+    item.height = 50;
     item.name = @"地址:";
     item.contentTip = @"请输入公司详细地址";
     
@@ -156,6 +168,7 @@
     NSString *title = self.totalItem.positionItem.content;
     NSString *city = self.totalItem.cityItem.content;
     NSString *company = self.totalItem.companyItem.content;
+    NSString *address = self.totalItem.addressItem.content;
     
     if(title.length == 0 || city.length == 0 || company.length == 0)
     {

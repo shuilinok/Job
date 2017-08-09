@@ -7,13 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GroupCellItem.h"
-#import "LabelFieldCell.h"
-#import "LabelSectionHeaderView.h"
+#import "CellItem.h"
 
-@interface LabelFieldCellItem : GroupCellItem
+@interface LabelFieldCellItem : CellItem
 
-@property (weak, nonatomic) LabelFieldCell *cell;
+@property (strong, nonatomic) NSString *identifier;
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *content;
@@ -22,11 +20,15 @@
 @end
 
 
-@interface LabelSectionItem : GroupSectionItem
+@interface LabelSectionItem : SectionItem
 
-@property (weak, nonatomic) LabelSectionHeaderView *headerView;
+@property (strong, nonatomic) NSString *headerNibName;
 
-@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *footerNibName;
+
+@property (strong, nonatomic) NSString *header;
+
+@property (strong, nonatomic) NSString *footer;
 
 @end
 

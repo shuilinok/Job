@@ -48,7 +48,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
     return [sectionItem itemCount];
 }
@@ -59,36 +59,23 @@
     NSInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
     
-    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
-    GroupCellItem *cellItem = [sectionItem itemAtIndex:row];
-    if([cellItem isKindOfClass:[LabelFieldCellItem class]])
-    {
-        LabelFieldCellItem *item = (LabelFieldCellItem *)cellItem;
-        
-        LabelFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelFieldCell" forIndexPath:indexPath];
-        item.cell = cell;
-        
-        return cell;
-    }
+    SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    CellItem *cellItem = [sectionItem itemAtIndex:row];
     
-    return nil;
+    UITableViewCell *cell = [cellItem tableView:tableView cellForRowAtIndexPath:indexPath];
+    
+    
+    return cell;
     
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
-    if([sectionItem isKindOfClass:[LabelSectionItem class]])
-    {
-        LabelSectionItem *item  = (LabelSectionItem *)sectionItem;
-        LabelSectionHeaderView *v = [[[NSBundle mainBundle] loadNibNamed:@"LabelSectionHeaderView" owner:nil options:nil] lastObject];
-        item.headerView = v;
-        
-        return v;
-    }
+    UIView *headerView = [sectionItem tableView:tableView viewForHeaderInSection:section];
     
-    return nil;
+    return headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,15 +83,15 @@
     NSInteger section = indexPath.section;
     NSUInteger row = indexPath.row;
     
-    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
-    GroupCellItem *cellItem = [sectionItem itemAtIndex:row];
+    SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    CellItem *cellItem = [sectionItem itemAtIndex:row];
     
     return cellItem.height;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    GroupSectionItem *sectionItem = [self.totalItem itemAtIndex:section];
+    SectionItem *sectionItem = [self.totalItem itemAtIndex:section];
     
     return sectionItem.headerHeight;
 }

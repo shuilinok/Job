@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "KindCellItem.h"
 
 //标题：编辑框
 @interface LabelFieldCell : UITableViewCell
@@ -15,7 +15,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UITextField *contentField;
 
-//参数1个，NSString *text;
-@property (strong, nonatomic) MCProtocolCommand *fieldTextChangedCommand;
+@property (strong, nonatomic) LabelFieldCellItem *item;
 
 @end

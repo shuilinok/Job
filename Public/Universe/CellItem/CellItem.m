@@ -8,8 +8,10 @@
 
 #import "CellItem.h"
 
-#define kCellItemAssignCellNotification     @"CellItemAssignCellNotification"
-#define kCell                               @"Cell"
+
+@interface CellItem ()
+@property (strong, nonatomic) id<GroupItem> groupItem;
+@end
 
 @implementation CellItem
 
@@ -18,50 +20,71 @@
     self = [super init];
     if(self)
     {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(assignCellNotification:) name:kCellItemAssignCellNotification object:nil];
+        GroupItem *groupItem = [[GroupItem alloc] init];
+        
+        self.groupItem = groupItem;
     }
     
     return self;
 }
 
-- (void)dealloc
+- (id)forwardingTargetForSelector:(SEL)aSelector
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kCellItemAssignCellNotification object:nil];
-}
-
-- (void)setCell:(UITableViewCell *)cell
-{
-    _cell = cell;
+    if([self.groupItem respondsToSelector:aSelector])
+    {
+        return self.groupItem;
+    }
     
-    if(cell)
-    {
-        [[NSNotificationCenter defaultCenter] postNotificationName:kCellItemAssignCellNotification object:self userInfo:@{kCell:cell}];
-    }
+    return nil;
 }
 
-- (void)assignCellNotification:(NSNotification *)notification
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(notification.object != self && [notification.userInfo objectForKey:kCell] == self.cell)//别的cellitem对象关联了这个cell
-    {
-        self.cell = nil;
-    }
+    //...
+    return nil;
 }
-
 
 @end
 
 
-@implementation SectionItem
+@interface SectionItem ()
+@property (strong, nonatomic) id<GroupItem> groupItem;
+@end
 
+@implementation SectionItem
 - (instancetype)init
 {
     self = [super init];
     if(self)
     {
+        GroupItem *groupItem = [[GroupItem alloc] init];
         
+        self.groupItem = groupItem;
     }
     
     return self;
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+    if([self.groupItem respondsToSelector:aSelector])
+    {
+        return self.groupItem;
+    }
+    
+    return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    //...
+    return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    //...
+    return nil;
 }
 
 @end
